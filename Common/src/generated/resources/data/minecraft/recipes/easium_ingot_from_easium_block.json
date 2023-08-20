@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "easium_ingot",
+  "ingredients": [
+    {
+      "item": "anotherqualityoreset:easium_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "anotherqualityoreset:easium_ingot"
+  }
+}

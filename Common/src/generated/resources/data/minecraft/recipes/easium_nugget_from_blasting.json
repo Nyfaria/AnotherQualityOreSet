@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "ingredient": [
+    {
+      "item": "anotherqualityoreset:easium_pickaxe"
+    },
+    {
+      "item": "anotherqualityoreset:easium_shovel"
+    },
+    {
+      "item": "anotherqualityoreset:easium_axe"
+    },
+    {
+      "item": "anotherqualityoreset:easium_hoe"
+    },
+    {
+      "item": "anotherqualityoreset:easium_sword"
+    },
+    {
+      "item": "anotherqualityoreset:easium_helmet"
+    },
+    {
+      "item": "anotherqualityoreset:easium_chestplate"
+    },
+    {
+      "item": "anotherqualityoreset:easium_leggings"
+    },
+    {
+      "item": "anotherqualityoreset:easium_boots"
+    }
+  ],
+  "result": "anotherqualityoreset:easium_nugget"
+}

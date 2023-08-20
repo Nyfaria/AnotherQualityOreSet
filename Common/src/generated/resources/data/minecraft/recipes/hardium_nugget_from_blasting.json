@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "ingredient": [
+    {
+      "item": "anotherqualityoreset:hardium_pickaxe"
+    },
+    {
+      "item": "anotherqualityoreset:hardium_shovel"
+    },
+    {
+      "item": "anotherqualityoreset:hardium_axe"
+    },
+    {
+      "item": "anotherqualityoreset:hardium_hoe"
+    },
+    {
+      "item": "anotherqualityoreset:hardium_sword"
+    },
+    {
+      "item": "anotherqualityoreset:hardium_helmet"
+    },
+    {
+      "item": "anotherqualityoreset:hardium_chestplate"
+    },
+    {
+      "item": "anotherqualityoreset:hardium_leggings"
+    },
+    {
+      "item": "anotherqualityoreset:hardium_boots"
+    }
+  ],
+  "result": "anotherqualityoreset:hardium_nugget"
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "easium_ingot",
+  "key": {
+    "#": {
+      "item": "anotherqualityoreset:easium_nugget"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "anotherqualityoreset:easium_ingot"
+  }
+}

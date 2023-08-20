@@ -2,6 +2,7 @@ plugins {
     id 'fabric-loom' version '1.0-SNAPSHOT'
     id 'maven-publish'
     id 'idea'
+    id "me.modmuss50.mod-publish-plugin" version "0.3.3"
 }
 
 archivesBaseName = "${mod_id}-fabric-${minecraft_version}"
@@ -10,7 +11,7 @@ dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
     mappings loom.layered() {
         officialMojangMappings()
-        parchment("org.parchmentmc.data:parchment-1.19.3:2023.03.12@zip")
+        parchment("org.parchmentmc.data:parchment-1.19.2:2022.11.27@zip")
     }
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
@@ -36,6 +37,8 @@ loom {
     mixin {
         defaultRefmapName = "${mod_id}.refmap.json"
     }
+
+    accessWidenerPath = (project(":Common").file("src/main/resources/anotherqualityoreset.accesswidener"))
 }
 def resourceTargets = ['META-INF/mods.toml', 'pack.mcmeta', "${mod_id}.mixins.json".toString(),'fabric.mod.json']
 def intoTargets = ["$rootDir/out/production/resources/", "$rootDir/out/production/${project.name}.main/", "$rootDir/bin/main/"]
@@ -95,4 +98,30 @@ publishing {
             url "file://" + System.getenv("local_maven")
         }
     }
+}
+publishMods {
+    file = remapJar.archiveFile
+    changelog = project(":Common").file("changelog.md").text
+    type = STABLE
+    modLoaders.add("fabric")
+    displayName = "${mod_id}-${minecraft_version}-fabric-${project.property('version')}"
+    dryRun = dry_run.toBoolean()
+    if (curseforge_publishing_enabled.toBoolean()) {
+        curseforge {
+            projectId = curseforge_project_id
+            accessToken = curseforge_token
+            minecraftVersions.add(minecraft_version)
+            requires {
+                slug = "curios"
+            }
+        }
+    }
+    if (modrinth_publishing_enabled.toBoolean()) {
+        modrinth {
+            accessToken = modrinth_token
+            projectId = modrinth_project_id
+            minecraftVersions.add(minecraft_version)
+        }
+    }
+
 }

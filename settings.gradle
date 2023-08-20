@@ -28,5 +28,5 @@ pluginManagement {
 }
 
 
-rootProject.name = "nyfsmultiloader"
+rootProject.name = "anotherqualityoreset"
 include("Common", "Fabric", "Forge")

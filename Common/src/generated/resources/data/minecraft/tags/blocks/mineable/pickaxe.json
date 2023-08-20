@@ -1,0 +1,13 @@
+{
+  "values": [
+    "anotherqualityoreset:easium_ore",
+    "anotherqualityoreset:easium_block",
+    "anotherqualityoreset:raw_easium_block",
+    "anotherqualityoreset:medium_ore",
+    "anotherqualityoreset:medium_block",
+    "anotherqualityoreset:raw_medium_block",
+    "anotherqualityoreset:hardium_ore",
+    "anotherqualityoreset:hardium_block",
+    "anotherqualityoreset:raw_hardium_block"
+  ]
+}

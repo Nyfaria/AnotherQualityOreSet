@@ -12,10 +12,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.nyfaria.nyfsmultiloader.ExampleMod"
+      "com.nyfaria.anotherqualityoreset.AnotherQualityOreSet"
     ],
     "client": [
-      "com.nyfaria.nyfsmultiloader.ExampleModClient"
+      "com.nyfaria.anotherqualityoreset.AnotherQualityOreSetClient"
     ]
   },
   "mixins": [

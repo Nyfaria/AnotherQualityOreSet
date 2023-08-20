@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "medium_ingot",
+  "key": {
+    "#": {
+      "item": "anotherqualityoreset:medium_nugget"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "anotherqualityoreset:medium_ingot"
+  }
+}

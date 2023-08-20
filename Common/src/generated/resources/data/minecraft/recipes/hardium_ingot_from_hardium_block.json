@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "hardium_ingot",
+  "ingredients": [
+    {
+      "item": "anotherqualityoreset:hardium_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "anotherqualityoreset:hardium_ingot"
+  }
+}
