@@ -24,8 +24,4 @@ public class FabricPlatformHelper implements IPlatformHelper {
         return FabricLoader.getInstance().isDevelopmentEnvironment();
     }
 
-    @Override
-    public CreativeModeTab getCreativeModeTab() {
-        return AnotherQualityOreSet.CREATIVE_MODE_TAB;
-    }
 }

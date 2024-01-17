@@ -26,8 +26,4 @@ public class ForgePlatformHelper implements IPlatformHelper {
         return !FMLLoader.isProduction();
     }
 
-    @Override
-    public CreativeModeTab getCreativeModeTab() {
-        return AnotherQualityOreSet.CREATIVE_MODE_TAB;
-    }
 }

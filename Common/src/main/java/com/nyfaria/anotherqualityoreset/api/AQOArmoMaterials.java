@@ -1,30 +1,49 @@
 package com.nyfaria.anotherqualityoreset.api;
 
 import com.nyfaria.anotherqualityoreset.init.BlockInit;
+import net.minecraft.Util;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
+import java.util.EnumMap;
 import java.util.function.Supplier;
 
 public enum AQOArmoMaterials implements ArmorMaterial {
-    EASIUM("easium", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.of(BlockInit.EASIUM_ORE.getIngot().get()), Blocks.IRON_ORE, UniformInt.of(0,0)),
-    MEDIUM("medium", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> Ingredient.of(BlockInit.MEDIUM_ORE.getIngot().get()), Blocks.DIAMOND_ORE, UniformInt.of(2,5)),
-    HARDIUM("hardium", 37, new int[]{3, 6, 8, 3}, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(BlockInit.HARDIUM_ORE.getIngot().get()), Blocks.ANCIENT_DEBRIS, UniformInt.of(6,9));
+    EASIUM("easium", 15, Util.make(new EnumMap<>(ArmorItem.Type.class),
+            (map) -> {
+                map.put(ArmorItem.Type.BOOTS, 2);
+                map.put(ArmorItem.Type.LEGGINGS, 5);
+                map.put(ArmorItem.Type.CHESTPLATE, 6);
+                map.put(ArmorItem.Type.HELMET, 2);
+            }),
+            9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.of(BlockInit.EASIUM_ORE.getIngot().get()), Blocks.IRON_ORE, UniformInt.of(0, 0)),
+    MEDIUM("medium", 33, Util.make(new EnumMap<>(ArmorItem.Type.class),
+            (map) -> {
+                map.put(ArmorItem.Type.BOOTS, 3);
+                map.put(ArmorItem.Type.LEGGINGS, 6);
+                map.put(ArmorItem.Type.CHESTPLATE, 8);
+                map.put(ArmorItem.Type.HELMET, 3);
+            }), 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> Ingredient.of(BlockInit.MEDIUM_ORE.getIngot().get()), Blocks.DIAMOND_ORE, UniformInt.of(2, 5)),
+    HARDIUM("hardium", 37, Util.make(new EnumMap<>(ArmorItem.Type.class),
+            (map) -> {
+                map.put(ArmorItem.Type.BOOTS, 3);
+                map.put(ArmorItem.Type.LEGGINGS, 6);
+                map.put(ArmorItem.Type.CHESTPLATE, 8);
+                map.put(ArmorItem.Type.HELMET, 3);
+            }), 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(BlockInit.HARDIUM_ORE.getIngot().get()), Blocks.ANCIENT_DEBRIS, UniformInt.of(6, 9));
 
-    private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
     private final String name;
     private final int durabilityMultiplier;
-    private final int[] slotProtections;
+    private final EnumMap<ArmorItem.Type, Integer> protectionFunctionForType;
     private final int enchantmentValue;
     private final SoundEvent sound;
     private final float toughness;
@@ -32,11 +51,17 @@ public enum AQOArmoMaterials implements ArmorMaterial {
     private final LazyLoadedValue<Ingredient> repairIngredient;
     private final BlockBehaviour mimicBlock;
     private final IntProvider oreXp;
+    private static final EnumMap<ArmorItem.Type, Integer> HEALTH_FUNCTION_FOR_TYPE = Util.make(new EnumMap(ArmorItem.Type.class), ($$0) -> {
+        $$0.put(ArmorItem.Type.BOOTS, 13);
+        $$0.put(ArmorItem.Type.LEGGINGS, 15);
+        $$0.put(ArmorItem.Type.CHESTPLATE, 16);
+        $$0.put(ArmorItem.Type.HELMET, 11);
+    });
 
-    private AQOArmoMaterials(String name, int durabilityMultiplier, int[] slotProtection, int enchantmentValue, SoundEvent soundEvent, float toughness, float knockbackResistance, Supplier repairIngredient, BlockBehaviour mimicBlock, IntProvider oreXp) {
+    AQOArmoMaterials(String name, int durabilityMultiplier, EnumMap<ArmorItem.Type, Integer> pProtectionFunctionForType, int enchantmentValue, SoundEvent soundEvent, float toughness, float knockbackResistance, Supplier repairIngredient, BlockBehaviour mimicBlock, IntProvider oreXp) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;
-        this.slotProtections = slotProtection;
+        this.protectionFunctionForType = pProtectionFunctionForType;
         this.enchantmentValue = enchantmentValue;
         this.sound = soundEvent;
         this.toughness = toughness;
@@ -46,12 +71,15 @@ public enum AQOArmoMaterials implements ArmorMaterial {
         this.oreXp = oreXp;
     }
 
-    public int getDurabilityForSlot(EquipmentSlot $$0) {
-        return HEALTH_PER_SLOT[$$0.getIndex()] * this.durabilityMultiplier;
+
+    @Override
+    public int getDurabilityForType(ArmorItem.Type type) {
+        return HEALTH_FUNCTION_FOR_TYPE.get(type) * this.durabilityMultiplier;
     }
 
-    public int getDefenseForSlot(EquipmentSlot $$0) {
-        return this.slotProtections[$$0.getIndex()];
+    @Override
+    public int getDefenseForType(ArmorItem.Type pType) {
+        return this.protectionFunctionForType.get(pType);
     }
 
     public int getEnchantmentValue() {
@@ -63,7 +91,7 @@ public enum AQOArmoMaterials implements ArmorMaterial {
     }
 
     public Ingredient getRepairIngredient() {
-        return (Ingredient)this.repairIngredient.get();
+        return (Ingredient) this.repairIngredient.get();
     }
 
     public String getName() {

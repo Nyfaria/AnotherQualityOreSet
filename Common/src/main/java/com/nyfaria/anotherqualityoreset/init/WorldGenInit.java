@@ -2,26 +2,13 @@ package com.nyfaria.anotherqualityoreset.init;
 
 import com.nyfaria.anotherqualityoreset.Constants;
 import com.nyfaria.anotherqualityoreset.registration.RegistrationProvider;
-import com.nyfaria.anotherqualityoreset.registration.RegistryObject;
-import net.minecraft.data.BuiltinRegistries;
-import net.minecraft.data.worldgen.features.OreFeatures;
-import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.level.levelgen.VerticalAnchor;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import net.minecraft.world.level.levelgen.placement.BiomeFilter;
-import net.minecraft.world.level.levelgen.placement.CountPlacement;
-import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
-import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
-
-import java.util.Arrays;
 
 public class WorldGenInit {
-    public static final RegistrationProvider<ConfiguredFeature<?,?>> CONFIGURED_FEATURES = RegistrationProvider.get(BuiltinRegistries.CONFIGURED_FEATURE, Constants.MODID);
-    public static final RegistrationProvider<PlacedFeature> FEATURES = RegistrationProvider.get(BuiltinRegistries.PLACED_FEATURE, Constants.MODID);
+    public static final RegistrationProvider<ConfiguredFeature<?,?>> CONFIGURED_FEATURES = RegistrationProvider.get(Registries.CONFIGURED_FEATURE, Constants.MODID);
+    public static final RegistrationProvider<PlacedFeature> FEATURES = RegistrationProvider.get(Registries.PLACED_FEATURE, Constants.MODID);
 //    public static final RegistryObject<ConfiguredFeature<?,?>> EASIUM_ORE = CONFIGURED_FEATURES.register("easium_ore", () ->new ConfiguredFeature
 //            (Feature.ORE, new OreConfiguration(
 //                    OreFeatures.STONE_ORE_REPLACEABLES,

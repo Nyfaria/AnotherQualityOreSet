@@ -3,8 +3,11 @@ package com.nyfaria.anotherqualityoreset.datagen;
 import com.nyfaria.anotherqualityoreset.Constants;
 import com.nyfaria.anotherqualityoreset.init.BlockInit;
 import com.nyfaria.anotherqualityoreset.init.TagInit;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
@@ -12,38 +15,40 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 public class ModTagProvider {
 
     public static class ModItemTags extends TagsProvider<Item> {
 
-        public ModItemTags(DataGenerator pGenerator, @Nullable ExistingFileHelper existingFileHelper) {
-            super(pGenerator, Registry.ITEM, Constants.MODID, existingFileHelper);
+        public ModItemTags(PackOutput p_256596_, CompletableFuture<HolderLookup.Provider> p_256513_, @Nullable ExistingFileHelper existingFileHelper) {
+            super(p_256596_, Registries.ITEM, p_256513_, Constants.MODID, existingFileHelper);
         }
 
         @Override
-        protected void addTags() {
+        protected void addTags(HolderLookup.Provider pProvider) {
 
         }
 
-        public void populateTag(TagKey<Item> tag, Supplier<Item>... items) {
+        public void populateTag(TagKey<Item> tag, Supplier<Item>... items){
             for (Supplier<Item> item : items) {
-                tag(tag).add(item.get());
+                tag(tag).add(ForgeRegistries.ITEMS.getResourceKey(item.get()).get());
             }
         }
     }
 
     public static class ModBlockTags<T extends Block> extends TagsProvider<Block> {
 
-        public ModBlockTags(DataGenerator pGenerator, @Nullable ExistingFileHelper existingFileHelper) {
-            super(pGenerator, Registry.BLOCK, Constants.MODID, existingFileHelper);
+        public ModBlockTags(PackOutput pGenerator, CompletableFuture<HolderLookup.Provider> p_256513_, @Nullable ExistingFileHelper existingFileHelper) {
+            super(pGenerator, Registries.BLOCK, p_256513_, Constants.MODID, existingFileHelper);
         }
 
         @Override
-        protected void addTags() {
+        protected void addTags(HolderLookup.Provider pProvider) {
 //            populateTag(TagInit.END_ORE_REPLACEABLES, () -> Blocks.END_STONE);
 //            populateTag(TagInit.NETHER_ORE_REPLACEABLES, () -> Blocks.NETHERRACK);
             populateTag(BlockTags.MINEABLE_WITH_PICKAXE,
@@ -66,9 +71,9 @@ public class ModTagProvider {
 
         }
 
-        public void populateTag(TagKey<Block> tag, Supplier<Block>... items) {
-            for (Supplier<Block> item : items) {
-                tag(tag).add(item.get());
+        public  <T extends Block>void populateTag(TagKey<Block> tag, Supplier<?>... items){
+            for (Supplier<?> item : items) {
+                tag(tag).add(ForgeRegistries.BLOCKS.getResourceKey((Block)item.get()).get());
             }
         }
     }

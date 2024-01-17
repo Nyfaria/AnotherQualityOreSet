@@ -3,6 +3,7 @@ package com.nyfaria.anotherqualityoreset.datagen;
 import com.nyfaria.anotherqualityoreset.Constants;
 import com.nyfaria.anotherqualityoreset.init.BlockInit;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -13,7 +14,7 @@ import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 public class ModBlockStateProvider extends BlockStateProvider {
-    public ModBlockStateProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
+    public ModBlockStateProvider(PackOutput generator, ExistingFileHelper existingFileHelper) {
         super(generator, Constants.MODID, existingFileHelper);
     }
 

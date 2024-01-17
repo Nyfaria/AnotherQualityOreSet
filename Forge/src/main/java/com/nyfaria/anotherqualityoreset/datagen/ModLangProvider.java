@@ -7,6 +7,8 @@ import com.nyfaria.anotherqualityoreset.init.EntityInit;
 import com.nyfaria.anotherqualityoreset.init.ItemInit;
 import com.nyfaria.anotherqualityoreset.registration.RegistryObject;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
+import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -25,7 +27,7 @@ public class ModLangProvider extends LanguageProvider {
             "sus", ""
     );
 
-    public ModLangProvider(DataGenerator gen) {
+    public ModLangProvider(PackOutput gen) {
         super(gen, Constants.MODID, "en_us");
     }
 

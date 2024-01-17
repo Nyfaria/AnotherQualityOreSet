@@ -4,6 +4,7 @@ import com.nyfaria.anotherqualityoreset.Constants;
 import com.nyfaria.anotherqualityoreset.api.OreCollection;
 import com.nyfaria.anotherqualityoreset.init.BlockInit;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -15,7 +16,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.stream.Stream;
 
 public class ModItemModelProvider extends ItemModelProvider {
-    public ModItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
+    public ModItemModelProvider(PackOutput generator, ExistingFileHelper existingFileHelper) {
         super(generator, Constants.MODID, existingFileHelper);
     }
 
