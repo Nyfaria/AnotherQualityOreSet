@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "equipment",
   "key": {
     "X": {
       "item": "anotherqualityoreset:medium_ingot"
@@ -11,5 +12,6 @@
   ],
   "result": {
     "item": "anotherqualityoreset:medium_boots"
-  }
+  },
+  "show_notification": true
 }

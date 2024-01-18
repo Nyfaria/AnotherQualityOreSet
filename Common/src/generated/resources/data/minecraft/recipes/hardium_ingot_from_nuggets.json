@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "group": "hardium_ingot",
   "key": {
     "#": {
@@ -13,5 +14,6 @@
   ],
   "result": {
     "item": "anotherqualityoreset:hardium_ingot"
-  }
+  },
+  "show_notification": true
 }

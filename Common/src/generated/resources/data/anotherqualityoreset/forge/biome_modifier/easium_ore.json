@@ -1,0 +1,9 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": [
+    "anotherqualityoreset:easium_ore",
+    "anotherqualityoreset:deepslate_easium_ore"
+  ],
+  "step": "underground_ores"
+}

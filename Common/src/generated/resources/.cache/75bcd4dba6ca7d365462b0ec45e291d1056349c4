@@ -1,5 +1,0 @@
-// 1.19.2	2023-08-20T08:32:26.4169442	Tags for minecraft:block
-1e69fef79a28b50d71b0841cdbb9ebed581177f4 data/fabric/tags/blocks/needs_tool_level_4.json
-b067b9d89a3c2f1d011adc0768bbd298abc0d95f data/minecraft/tags/blocks/mineable/pickaxe.json
-7185b9508c529ae564f96377dd3878223e2e0913 data/minecraft/tags/blocks/needs_diamond_tool.json
-3aa2b43f8fc58251f8ffa0093a1b2b177a4d3a2e data/minecraft/tags/blocks/needs_iron_tool.json

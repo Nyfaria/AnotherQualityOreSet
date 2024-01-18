@@ -25,21 +25,21 @@ public enum AQOArmoMaterials implements ArmorMaterial {
                 map.put(ArmorItem.Type.CHESTPLATE, 6);
                 map.put(ArmorItem.Type.HELMET, 2);
             }),
-            9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.of(BlockInit.EASIUM_ORE.getIngot().get()), Blocks.IRON_ORE, UniformInt.of(0, 0)),
+            9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.of(BlockInit.EASIUM_ORE.ingot().get()), Blocks.DIAMOND_ORE, UniformInt.of(0, 0)),
     MEDIUM("medium", 33, Util.make(new EnumMap<>(ArmorItem.Type.class),
             (map) -> {
                 map.put(ArmorItem.Type.BOOTS, 3);
                 map.put(ArmorItem.Type.LEGGINGS, 6);
                 map.put(ArmorItem.Type.CHESTPLATE, 8);
                 map.put(ArmorItem.Type.HELMET, 3);
-            }), 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> Ingredient.of(BlockInit.MEDIUM_ORE.getIngot().get()), Blocks.DIAMOND_ORE, UniformInt.of(2, 5)),
+            }), 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> Ingredient.of(BlockInit.MEDIUM_ORE.ingot().get()), Blocks.ANCIENT_DEBRIS, UniformInt.of(2, 5)),
     HARDIUM("hardium", 37, Util.make(new EnumMap<>(ArmorItem.Type.class),
             (map) -> {
                 map.put(ArmorItem.Type.BOOTS, 3);
                 map.put(ArmorItem.Type.LEGGINGS, 6);
                 map.put(ArmorItem.Type.CHESTPLATE, 8);
                 map.put(ArmorItem.Type.HELMET, 3);
-            }), 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(BlockInit.HARDIUM_ORE.getIngot().get()), Blocks.ANCIENT_DEBRIS, UniformInt.of(6, 9));
+            }), 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(BlockInit.HARDIUM_ORE.ingot().get()), Blocks.NETHERITE_BLOCK, UniformInt.of(6, 9));
 
     private final String name;
     private final int durabilityMultiplier;

@@ -28,18 +28,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         //         .forEach(this::simpleCubeBottomTopBlockState);
         //
         Stream.of(
-                        BlockInit.EASIUM_ORE.getBlock(),
-                        BlockInit.EASIUM_ORE.getOre(),
-                        BlockInit.EASIUM_ORE.getRawOreBlock(),
-                        BlockInit.MEDIUM_ORE.getBlock(),
-                        BlockInit.MEDIUM_ORE.getOre(),
-                        BlockInit.MEDIUM_ORE.getRawOreBlock(),
-                        BlockInit.HARDIUM_ORE.getBlock(),
-                        BlockInit.HARDIUM_ORE.getOre(),
-                        BlockInit.HARDIUM_ORE.getRawOreBlock()
+                        BlockInit.EASIUM_ORE.block(),
+                        BlockInit.EASIUM_ORE.ore(),
+                        BlockInit.EASIUM_ORE.rawOreBlock(),
+                        BlockInit.MEDIUM_ORE.block(),
+                        BlockInit.MEDIUM_ORE.ore(),
+                        BlockInit.MEDIUM_ORE.rawOreBlock(),
+                        BlockInit.HARDIUM_ORE.block(),
+                        BlockInit.HARDIUM_ORE.ore(),
+                        BlockInit.HARDIUM_ORE.rawOreBlock()
                 ).map(Supplier::get)
                 .forEach(this::simpleBlock);
-
+        simpleBlock(BlockInit.DEEPSLATE_EASIUM_ORE.get());
     }
 
     protected void simpleCubeBottomTopBlockState(Block block) {

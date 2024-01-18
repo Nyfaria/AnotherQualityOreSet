@@ -1,0 +1,33 @@
+{
+  "feature": "anotherqualityoreset:medium_ore",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "value": {
+          "max_inclusive": 5,
+          "min_inclusive": 2
+        }
+      }
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "max_inclusive": {
+          "absolute": 128
+        },
+        "min_inclusive": {
+          "absolute": 0
+        }
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
     "#": {
       "item": "anotherqualityoreset:raw_medium"
@@ -12,5 +13,6 @@
   ],
   "result": {
     "item": "anotherqualityoreset:raw_medium_block"
-  }
+  },
+  "show_notification": true
 }

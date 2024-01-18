@@ -34,101 +34,101 @@ public class ModRecipeProvider extends RecipeProvider {
     }
 
     public void oreCollectionRecipes(OreCollection collection, Consumer<FinishedRecipe> recipeSaver) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,collection.getAxe().get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,collection.axe().get())
                 .pattern("XX ")
                 .pattern("X# ")
                 .pattern(" # ")
-                .define('X', collection.getIngot().get())
+                .define('X', collection.ingot().get())
                 .define('#', Items.STICK)
-                .unlockedBy("has_item", has(collection.getIngot().get()))
+                .unlockedBy("has_item", has(collection.ingot().get()))
                 .save(recipeSaver);
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,collection.getHoe().get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,collection.hoe().get())
                 .pattern("XX ")
                 .pattern(" # ")
                 .pattern(" # ")
-                .define('X', collection.getIngot().get())
+                .define('X', collection.ingot().get())
                 .define('#', Items.STICK)
-                .unlockedBy("has_item", has(collection.getIngot().get()))
+                .unlockedBy("has_item", has(collection.ingot().get()))
                 .save(recipeSaver);
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,collection.getPickaxe().get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,collection.pickaxe().get())
                 .pattern("XXX")
                 .pattern(" # ")
                 .pattern(" # ")
-                .define('X', collection.getIngot().get())
+                .define('X', collection.ingot().get())
                 .define('#', Items.STICK)
-                .unlockedBy("has_item", has(collection.getIngot().get()))
+                .unlockedBy("has_item", has(collection.ingot().get()))
                 .save(recipeSaver);
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,collection.getShovel().get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,collection.shovel().get())
                 .pattern("X")
                 .pattern("#")
                 .pattern("#")
-                .define('X', collection.getIngot().get())
+                .define('X', collection.ingot().get())
                 .define('#', Items.STICK)
-                .unlockedBy("has_item", has(collection.getIngot().get()))
+                .unlockedBy("has_item", has(collection.ingot().get()))
                 .save(recipeSaver);
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT,collection.getSword().get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT,collection.sword().get())
                 .pattern("X")
                 .pattern("X")
                 .pattern("#")
-                .define('X', collection.getIngot().get())
+                .define('X', collection.ingot().get())
                 .define('#', Items.STICK)
-                .unlockedBy("has_item", has(collection.getIngot().get()))
+                .unlockedBy("has_item", has(collection.ingot().get()))
                 .save(recipeSaver);
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT,collection.getHelmet().get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT,collection.helmet().get())
                 .pattern("XXX")
                 .pattern("X X")
-                .define('X', collection.getIngot().get())
-                .unlockedBy("has_item", has(collection.getIngot().get()))
+                .define('X', collection.ingot().get())
+                .unlockedBy("has_item", has(collection.ingot().get()))
                 .save(recipeSaver);
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT,collection.getChestplate().get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT,collection.chestplate().get())
                 .pattern("X X")
                 .pattern("XXX")
                 .pattern("XXX")
-                .define('X', collection.getIngot().get())
-                .unlockedBy("has_item", has(collection.getIngot().get()))
+                .define('X', collection.ingot().get())
+                .unlockedBy("has_item", has(collection.ingot().get()))
                 .save(recipeSaver);
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT,collection.getLeggings().get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT,collection.leggings().get())
                 .pattern("XXX")
                 .pattern("X X")
                 .pattern("X X")
-                .define('X', collection.getIngot().get())
-                .unlockedBy("has_item", has(collection.getIngot().get()))
+                .define('X', collection.ingot().get())
+                .unlockedBy("has_item", has(collection.ingot().get()))
                 .save(recipeSaver);
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT,collection.getBoots().get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT,collection.boots().get())
                 .pattern("X X")
                 .pattern("X X")
-                .define('X', collection.getIngot().get())
-                .unlockedBy("has_item", has(collection.getIngot().get()))
+                .define('X', collection.ingot().get())
+                .unlockedBy("has_item", has(collection.ingot().get()))
                 .save(recipeSaver);
-        oreSmelting(recipeSaver, List.of(collection.getOre().get(), collection.getRawOre().get()),RecipeCategory.BUILDING_BLOCKS, collection.getIngot().get(), 1.0f, 200, collection.getName());
-        oreBlasting(recipeSaver, List.of(collection.getOre().get(), collection.getRawOre().get()),RecipeCategory.BUILDING_BLOCKS, collection.getIngot().get(), 1.0f, 100, collection.getName());
-        nineBlockStorageRecipesRecipesWithCustomUnpacking(recipeSaver,RecipeCategory.BUILDING_BLOCKS, collection.getIngot().get(),RecipeCategory.BUILDING_BLOCKS, collection.getBlock().get(), collection.getName() + "_ingot_from_" + collection.getName() + "_block", collection.getName() + "_ingot");
-        nineBlockStorageRecipesWithCustomPacking(recipeSaver,RecipeCategory.BUILDING_BLOCKS, collection.getNugget().get(),RecipeCategory.BUILDING_BLOCKS, collection.getIngot().get(), collection.getName() + "_ingot_from_nuggets", collection.getName() + "_ingot");
-        nineBlockStorageRecipes(recipeSaver, RecipeCategory.BUILDING_BLOCKS,collection.getRawOre().get(),RecipeCategory.BUILDING_BLOCKS, collection.getRawOreBlock().get());
+        oreSmelting(recipeSaver, List.of(collection.ore().get(), collection.rawOre().get()),RecipeCategory.BUILDING_BLOCKS, collection.ingot().get(), 1.0f, 200, collection.name());
+        oreBlasting(recipeSaver, List.of(collection.ore().get(), collection.rawOre().get()),RecipeCategory.BUILDING_BLOCKS, collection.ingot().get(), 1.0f, 100, collection.name());
+        nineBlockStorageRecipesRecipesWithCustomUnpacking(recipeSaver,RecipeCategory.BUILDING_BLOCKS, collection.ingot().get(),RecipeCategory.BUILDING_BLOCKS, collection.block().get(), collection.name() + "_ingot_from_" + collection.name() + "_block", collection.name() + "_ingot");
+        nineBlockStorageRecipesWithCustomPacking(recipeSaver,RecipeCategory.BUILDING_BLOCKS, collection.nugget().get(),RecipeCategory.BUILDING_BLOCKS, collection.ingot().get(), collection.name() + "_ingot_from_nuggets", collection.name() + "_ingot");
+        nineBlockStorageRecipes(recipeSaver, RecipeCategory.BUILDING_BLOCKS,collection.rawOre().get(),RecipeCategory.BUILDING_BLOCKS, collection.rawOreBlock().get());
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(
-                                collection.getPickaxe().get(),
-                                collection.getShovel().get(),
-                                collection.getAxe().get(),
-                                collection.getHoe().get(),
-                                collection.getSword().get(),
-                                collection.getHelmet().get(),
-                                collection.getChestplate().get(),
-                                collection.getLeggings().get(),
-                                collection.getBoots().get()
+                                collection.pickaxe().get(),
+                                collection.shovel().get(),
+                                collection.axe().get(),
+                                collection.hoe().get(),
+                                collection.sword().get(),
+                                collection.helmet().get(),
+                                collection.chestplate().get(),
+                                collection.leggings().get(),
+                                collection.boots().get()
 //                                , Items.GOLDEN_HORSE_ARMOR
                         ),RecipeCategory.MISC,
-                        collection.getNugget().get(), 0.1F, 100)
-                .unlockedBy("has_" + collection.getName() + "_pickaxe", has(collection.getPickaxe().get()))
-                .unlockedBy("has_" + collection.getName() + "_shovel", has(collection.getShovel().get()))
-                .unlockedBy("has_" + collection.getName() + "_axe", has(collection.getAxe().get()))
-                .unlockedBy("has_" + collection.getName() + "_hoe", has(collection.getHoe().get()))
-                .unlockedBy("has_" + collection.getName() + "_sword", has(collection.getSword().get()))
-                .unlockedBy("has_" + collection.getName() + "_helmet", has(collection.getHelmet().get()))
-                .unlockedBy("has_" + collection.getName() + "_chestplate", has(collection.getChestplate().get()))
-                .unlockedBy("has_" + collection.getName() + "_leggings", has(collection.getLeggings().get()))
-                .unlockedBy("has_" + collection.getName() + "_boots", has(collection.getBoots().get()))
+                        collection.nugget().get(), 0.1F, 100)
+                .unlockedBy("has_" + collection.name() + "_pickaxe", has(collection.pickaxe().get()))
+                .unlockedBy("has_" + collection.name() + "_shovel", has(collection.shovel().get()))
+                .unlockedBy("has_" + collection.name() + "_axe", has(collection.axe().get()))
+                .unlockedBy("has_" + collection.name() + "_hoe", has(collection.hoe().get()))
+                .unlockedBy("has_" + collection.name() + "_sword", has(collection.sword().get()))
+                .unlockedBy("has_" + collection.name() + "_helmet", has(collection.helmet().get()))
+                .unlockedBy("has_" + collection.name() + "_chestplate", has(collection.chestplate().get()))
+                .unlockedBy("has_" + collection.name() + "_leggings", has(collection.leggings().get()))
+                .unlockedBy("has_" + collection.name() + "_boots", has(collection.boots().get()))
 //                .unlockedBy("has_" + collection.getName() + "_horse_armor", has(Items.GOLDEN_HORSE_ARMOR))
-                .save(recipeSaver, getBlastingRecipeName(collection.getNugget().get()));
+                .save(recipeSaver, getBlastingRecipeName(collection.nugget().get()));
     }
 
 

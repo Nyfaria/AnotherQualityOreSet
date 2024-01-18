@@ -27,24 +27,25 @@ public class ModItemModelProvider extends ItemModelProvider {
                 BlockInit.MEDIUM_ORE,
                 BlockInit.HARDIUM_ORE
         ).forEach(this::oreCollection);
+        simpleBlockItemModel(BlockInit.DEEPSLATE_EASIUM_ORE.get());
     }
 
     public void oreCollection(OreCollection collection){
-        simpleBlockItemModel(collection.getOre().get());
-        simpleBlockItemModel(collection.getBlock().get());
-        simpleGeneratedModel(collection.getIngot().get());
-        simpleGeneratedModel(collection.getNugget().get());
-        simpleGeneratedModel(collection.getRawOre().get());
-        simpleBlockItemModel(collection.getRawOreBlock().get());
-        simpleHandHeldModel(collection.getAxe().get());
-        simpleHandHeldModel(collection.getHoe().get());
-        simpleHandHeldModel(collection.getPickaxe().get());
-        simpleHandHeldModel(collection.getShovel().get());
-        simpleHandHeldModel(collection.getSword().get());
-        simpleGeneratedModel(collection.getHelmet().get());
-        simpleGeneratedModel(collection.getChestplate().get());
-        simpleGeneratedModel(collection.getLeggings().get());
-        simpleGeneratedModel(collection.getBoots().get());
+        simpleBlockItemModel(collection.ore().get());
+        simpleBlockItemModel(collection.block().get());
+        simpleGeneratedModel(collection.ingot().get());
+        simpleGeneratedModel(collection.nugget().get());
+        simpleGeneratedModel(collection.rawOre().get());
+        simpleBlockItemModel(collection.rawOreBlock().get());
+        simpleHandHeldModel(collection.axe().get());
+        simpleHandHeldModel(collection.hoe().get());
+        simpleHandHeldModel(collection.pickaxe().get());
+        simpleHandHeldModel(collection.shovel().get());
+        simpleHandHeldModel(collection.sword().get());
+        simpleGeneratedModel(collection.helmet().get());
+        simpleGeneratedModel(collection.chestplate().get());
+        simpleGeneratedModel(collection.leggings().get());
+        simpleGeneratedModel(collection.boots().get());
     }
 
     protected ItemModelBuilder simpleBlockItemModel(Block block) {

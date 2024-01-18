@@ -1,0 +1,139 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_hardium_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:hardium_axe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_hardium_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:hardium_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_hardium_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:hardium_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_hardium_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:hardium_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_hardium_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:hardium_hoe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_hardium_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:hardium_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_hardium_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:hardium_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_hardium_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:hardium_shovel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_hardium_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:hardium_sword"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:hardium_nugget_from_blasting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_hardium_pickaxe",
+      "has_hardium_shovel",
+      "has_hardium_axe",
+      "has_hardium_hoe",
+      "has_hardium_sword",
+      "has_hardium_helmet",
+      "has_hardium_chestplate",
+      "has_hardium_leggings",
+      "has_hardium_boots",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:hardium_nugget_from_blasting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

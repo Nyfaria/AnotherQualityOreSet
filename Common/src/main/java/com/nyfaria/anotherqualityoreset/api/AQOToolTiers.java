@@ -16,9 +16,9 @@ import javax.annotation.Nullable;
 import java.util.function.Supplier;
 
 public enum AQOToolTiers implements Tier {
-    EASIUM(3, 250, 6.0F, 2.0F, 14, () -> Ingredient.of(BlockInit.EASIUM_ORE.getIngot().get()), BlockTags.NEEDS_IRON_TOOL),
-    MEDIUM(4, 1561, 8.0F, 3.0F, 10, () -> Ingredient.of(BlockInit.MEDIUM_ORE.getIngot().get()), BlockTags.NEEDS_DIAMOND_TOOL),
-    HARDIUM(5, 2031, 9.0F, 4.0F, 15, () -> Ingredient.of(BlockInit.HARDIUM_ORE.getIngot().get()), TagInit.NEEDS_TOOL_LEVEL_4);
+    EASIUM(3, 250, 6.0F, 2.0F, 14, () -> Ingredient.of(BlockInit.EASIUM_ORE.ingot().get()), TagInit.NEEDS_TOOL_LEVEL_4,3),
+    MEDIUM(4, 1561, 8.0F, 3.0F, 10, () -> Ingredient.of(BlockInit.MEDIUM_ORE.ingot().get()), TagInit.NEEDS_TOOL_LEVEL_5,5),
+    HARDIUM(5, 2031, 9.0F, 4.0F, 15, () -> Ingredient.of(BlockInit.HARDIUM_ORE.ingot().get()), TagInit.NEEDS_TOOL_LEVEL_6,7);
 
     private final int level;
     private final int uses;
@@ -27,8 +27,9 @@ public enum AQOToolTiers implements Tier {
     private final int enchantmentValue;
     private final LazyLoadedValue<Ingredient> repairIngredient;
     private final TagKey<Block> tag;
+    private final int breakRadius;
 
-    AQOToolTiers(int $$0, int $$1, float $$2, float $$3, int $$4, Supplier $$5, TagKey<Block>tag) {
+    AQOToolTiers(int $$0, int $$1, float $$2, float $$3, int $$4, Supplier $$5, TagKey<Block>tag, int breakRadius) {
         this.level = $$0;
         this.uses = $$1;
         this.speed = $$2;
@@ -36,6 +37,7 @@ public enum AQOToolTiers implements Tier {
         this.enchantmentValue = $$4;
         this.repairIngredient = new LazyLoadedValue($$5);
         this.tag = tag;
+        this.breakRadius = breakRadius;
     }
 
     public int getUses() {
@@ -63,4 +65,8 @@ public enum AQOToolTiers implements Tier {
     }
     @Nullable
     public TagKey<Block> getTag() { return tag; }
+
+    public int getBreakRadius() {
+        return breakRadius;
+    }
 }

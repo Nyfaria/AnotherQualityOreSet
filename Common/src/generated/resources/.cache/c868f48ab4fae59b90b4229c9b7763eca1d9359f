@@ -1,4 +1,5 @@
-// 1.19.2	2023-07-28T00:32:20.7608004	Block States: anotherqualityoreset
+// 1.20.1	2024-01-17T16:59:53.404157	Block States: anotherqualityoreset
+a32679e566337706acfe169e7d247eb459d41ae0 assets/anotherqualityoreset/blockstates/deepslate_easium_ore.json
 3c15f59867d55d2a4057dcf8bcaae7caf331aaa8 assets/anotherqualityoreset/blockstates/easium_block.json
 8130c7f54b734a2accb509a870dc8b448c4339b6 assets/anotherqualityoreset/blockstates/easium_ore.json
 041a762aca693aaba495191c7b135e58140688d2 assets/anotherqualityoreset/blockstates/hardium_block.json
@@ -8,6 +9,7 @@ dd45b289394daa40b55ab648a987dd961cfd814f assets/anotherqualityoreset/blockstates
 1d252a484b9c32663edad6067535e6a318072f37 assets/anotherqualityoreset/blockstates/raw_easium_block.json
 888f99b8a5d5b949c5ffaaaf719c2002a099b821 assets/anotherqualityoreset/blockstates/raw_hardium_block.json
 061de3d020754e6961c08afa564e945d566c9443 assets/anotherqualityoreset/blockstates/raw_medium_block.json
+936e25b93cfb10d0a123cd836d5966d87ae30bc7 assets/anotherqualityoreset/models/block/deepslate_easium_ore.json
 6518a904e8c1df97d2ea8ae0cac1219dfb779613 assets/anotherqualityoreset/models/block/easium_block.json
 52c650674a3c72e54ffd2c75007831c83f395bc7 assets/anotherqualityoreset/models/block/easium_ore.json
 b54ee40fe5072f03d4fb9743ba324f6c7b129f0f assets/anotherqualityoreset/models/block/hardium_block.json

@@ -1,0 +1,139 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_easium_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:easium_axe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_easium_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:easium_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_easium_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:easium_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_easium_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:easium_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_easium_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:easium_hoe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_easium_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:easium_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_easium_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:easium_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_easium_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:easium_shovel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_easium_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:easium_sword"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:easium_nugget_from_blasting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_easium_pickaxe",
+      "has_easium_shovel",
+      "has_easium_axe",
+      "has_easium_hoe",
+      "has_easium_sword",
+      "has_easium_helmet",
+      "has_easium_chestplate",
+      "has_easium_leggings",
+      "has_easium_boots",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:easium_nugget_from_blasting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

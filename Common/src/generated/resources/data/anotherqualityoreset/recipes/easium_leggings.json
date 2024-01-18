@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "equipment",
   "key": {
     "X": {
       "item": "anotherqualityoreset:easium_ingot"
@@ -12,5 +13,6 @@
   ],
   "result": {
     "item": "anotherqualityoreset:easium_leggings"
-  }
+  },
+  "show_notification": true
 }

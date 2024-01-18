@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "anotherqualityoreset:block/deepslate_easium_ore"
+  }
+}

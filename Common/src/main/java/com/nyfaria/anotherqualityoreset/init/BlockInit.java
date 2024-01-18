@@ -9,7 +9,10 @@ import com.nyfaria.anotherqualityoreset.registration.RegistryObject;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -18,7 +21,7 @@ public class BlockInit {
     public static final RegistrationProvider<Block> BLOCKS = RegistrationProvider.get(Registries.BLOCK, Constants.MODID);
     public static final RegistrationProvider<BlockEntityType<?>> BLOCK_ENTITIES = RegistrationProvider.get(Registries.BLOCK_ENTITY_TYPE, Constants.MODID);
 
-//    public static final RegistryObject<DropExperienceBlock> EASIUM_ORE = registerBlock("easium_ore", ()-> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
+    public static final RegistryObject<DropExperienceBlock> DEEPSLATE_EASIUM_ORE = registerBlock("deepslate_easium_ore", ()-> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_DIAMOND_ORE)));
 //    public static final RegistryObject<DropExperienceBlock> MEDIUM_ORE = registerBlock("medium_ore", ()-> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE),UniformInt.of(3,5)));
 //    public static final RegistryObject<DropExperienceBlock> HARDIUM_ORE = registerBlock("hardium_ore", ()-> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.ANCIENT_DEBRIS), UniformInt.of(6,9)));
 

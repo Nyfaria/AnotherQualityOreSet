@@ -1,0 +1,33 @@
+{
+  "feature": "anotherqualityoreset:deepslate_easium_ore",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "value": {
+          "max_inclusive": 7,
+          "min_inclusive": 3
+        }
+      }
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "max_inclusive": {
+          "absolute": 0
+        },
+        "min_inclusive": {
+          "absolute": -64
+        }
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

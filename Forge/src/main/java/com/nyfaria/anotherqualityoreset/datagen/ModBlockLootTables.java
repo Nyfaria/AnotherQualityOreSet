@@ -17,9 +17,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     }
     protected void generate() {
         this.getBlockStream().filter(this::shouldDropSelf).forEach(this::dropSelf);
-        this.add(BlockInit.EASIUM_ORE.getOre().get(), (block) -> createOreDrop(block, BlockInit.EASIUM_ORE.getRawOre().get()));
-        this.add(BlockInit.MEDIUM_ORE.getOre().get(), (block) -> createOreDrop(block, BlockInit.MEDIUM_ORE.getRawOre().get()));
-        this.add(BlockInit.HARDIUM_ORE.getOre().get(), (block) -> createOreDrop(block, BlockInit.HARDIUM_ORE.getRawOre().get()));
+        this.add(BlockInit.EASIUM_ORE.ore().get(), (block) -> createOreDrop(block, BlockInit.EASIUM_ORE.rawOre().get()));
+        this.add(BlockInit.MEDIUM_ORE.ore().get(), (block) -> createOreDrop(block, BlockInit.MEDIUM_ORE.rawOre().get()));
+        this.add(BlockInit.HARDIUM_ORE.ore().get(), (block) -> createOreDrop(block, BlockInit.HARDIUM_ORE.rawOre().get()));
+        this.add(BlockInit.DEEPSLATE_EASIUM_ORE.get(), (block) -> createOreDrop(block, BlockInit.EASIUM_ORE.rawOre().get()));
     }
 
     @Override

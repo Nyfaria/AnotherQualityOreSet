@@ -14,6 +14,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.Nullable;
@@ -52,23 +53,28 @@ public class ModTagProvider {
 //            populateTag(TagInit.END_ORE_REPLACEABLES, () -> Blocks.END_STONE);
 //            populateTag(TagInit.NETHER_ORE_REPLACEABLES, () -> Blocks.NETHERRACK);
             populateTag(BlockTags.MINEABLE_WITH_PICKAXE,
-                    () -> BlockInit.EASIUM_ORE.getOre().get(),
-                    () -> BlockInit.EASIUM_ORE.getBlock().get(),
-                    () -> BlockInit.EASIUM_ORE.getRawOreBlock().get(),
-                    () -> BlockInit.MEDIUM_ORE.getOre().get(),
-                    () -> BlockInit.MEDIUM_ORE.getBlock().get(),
-                    () -> BlockInit.MEDIUM_ORE.getRawOreBlock().get(),
-                    () -> BlockInit.HARDIUM_ORE.getOre().get(),
-                    () -> BlockInit.HARDIUM_ORE.getBlock().get(),
-                    () -> BlockInit.HARDIUM_ORE.getRawOreBlock().get()
+                    () -> BlockInit.EASIUM_ORE.ore().get(),
+                    () -> BlockInit.EASIUM_ORE.block().get(),
+                    () -> BlockInit.EASIUM_ORE.rawOreBlock().get(),
+                    () -> BlockInit.MEDIUM_ORE.ore().get(),
+                    () -> BlockInit.MEDIUM_ORE.block().get(),
+                    () -> BlockInit.MEDIUM_ORE.rawOreBlock().get(),
+                    () -> BlockInit.HARDIUM_ORE.ore().get(),
+                    () -> BlockInit.HARDIUM_ORE.block().get(),
+                    () -> BlockInit.HARDIUM_ORE.rawOreBlock().get()
             );
-            populateTag(BlockTags.NEEDS_IRON_TOOL,
-                    ()->BlockInit.EASIUM_ORE.getBlock().get());
-            populateTag(BlockTags.NEEDS_DIAMOND_TOOL,
-                    ()->BlockInit.MEDIUM_ORE.getBlock().get());
-            populateTag(TagInit.NEEDS_TOOL_LEVEL_4,
-                    ()->BlockInit.HARDIUM_ORE.getBlock().get());
 
+            tag(Tags.Blocks.NEEDS_NETHERITE_TOOL).addTag(TagInit.NEEDS_TOOL_LEVEL_4);
+            populateTag(TagInit.NEEDS_TOOL_LEVEL_4,
+                    ()->BlockInit.EASIUM_ORE.block().get());
+            populateTag(TagInit.NEEDS_TOOL_LEVEL_5,
+                    ()->BlockInit.MEDIUM_ORE.block().get());
+            populateTag(TagInit.NEEDS_TOOL_LEVEL_6,
+                    ()->BlockInit.MEDIUM_ORE.block().get());
+            populateTag(TagInit.NEEDS_TOOL_LEVEL_5,
+                    ()->BlockInit.HARDIUM_ORE.block().get());
+
+            tag(TagInit.MINEABLE_WITH_PAXEL).addTags(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.MINEABLE_WITH_AXE);
         }
 
         public  <T extends Block>void populateTag(TagKey<Block> tag, Supplier<?>... items){
