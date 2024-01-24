@@ -1,6 +1,7 @@
 package com.nyfaria.anotherqualityoreset.event;
 
 import com.nyfaria.anotherqualityoreset.api.HammerEvents;
+import com.nyfaria.anotherqualityoreset.api.TreeAxeEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
@@ -22,16 +23,8 @@ public class CommonForgeEvents {
     public static void onBlockBreakEvent(@Nonnull BlockEvent.BreakEvent event) {
         if (!event.isCanceled() && !event.getLevel().isClientSide()) {
             BlockPos thePos = event.getPos();
-//            if (isPlayerInRightState(event.getPlayer(), thePos) && event.getLevel() instanceof Level) {
-//                try {
-//                    TreeBuilder.getTree((Level) event.getLevel(), thePos).ifPresent(tree -> {
-//                        getBreakingHandler().breakTree(event, tree);
-//                    });
-//                } catch (TreeTooBigException ignored) {
-//                }
-//            }
             HammerEvents.breakBlock((ServerPlayer) event.getPlayer(), thePos, event.getPlayer().getMainHandItem());
-
+            TreeAxeEvents.breakTree((ServerPlayer) event.getPlayer(), thePos, event.getState());
         }
     }
 }

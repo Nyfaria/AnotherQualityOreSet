@@ -1,6 +1,7 @@
 package com.nyfaria.anotherqualityoreset;
 
 import com.nyfaria.anotherqualityoreset.api.AQOToolTiers;
+import com.nyfaria.anotherqualityoreset.config.CommonConfig;
 import com.nyfaria.anotherqualityoreset.datagen.ModBlockStateProvider;
 import com.nyfaria.anotherqualityoreset.datagen.ModItemModelProvider;
 import com.nyfaria.anotherqualityoreset.datagen.ModLangProvider;
@@ -19,7 +20,9 @@ import net.minecraftforge.common.ToolActions;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 
 import java.util.List;
 import java.util.Set;
@@ -37,11 +40,7 @@ public class AnotherQualityOreSet {
 
     public AnotherQualityOreSet() {
 
-        // This method is invoked by the Forge mod loader when it is ready
-        // to load your mod. You can access Forge and Common code in this
-        // project.
-
-        // Use Forge to bootstrap the Common mod.
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CommonConfig.CONFIG_SPEC);
         Constants.LOG.info("Hello Forge world!");
         CommonClass.init();
         TierSortingRegistry.registerTier(AQOToolTiers.EASIUM, new ResourceLocation(Constants.MODID, "easium"),

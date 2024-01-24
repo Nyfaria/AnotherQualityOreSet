@@ -1,5 +1,6 @@
 package com.nyfaria.anotherqualityoreset.api;
 
+import com.nyfaria.anotherqualityoreset.config.CommonConfig;
 import com.nyfaria.anotherqualityoreset.init.BlockInit;
 import net.minecraft.Util;
 import net.minecraft.sounds.SoundEvent;
@@ -79,10 +80,31 @@ public enum AQOArmoMaterials implements ArmorMaterial {
 
     @Override
     public int getDefenseForType(ArmorItem.Type pType) {
+        if(CommonConfig.CONFIG_SPEC.isLoaded()){
+            if(EASIUM == this) {
+                return CommonConfig.INSTANCE.easiumDefense.get().get(pType.ordinal()).intValue();
+            }
+            if(MEDIUM == this) {
+                return CommonConfig.INSTANCE.mediumDefense.get().get(pType.ordinal()).intValue();
+            }
+            if(HARDIUM == this) {
+                return CommonConfig.INSTANCE.hardiumDefense.get().get(pType.ordinal()).intValue();
+            }
+        }
+
         return this.protectionFunctionForType.get(pType);
     }
 
     public int getEnchantmentValue() {
+        if(CommonConfig.CONFIG_SPEC.isLoaded() && EASIUM == this){
+            return CommonConfig.INSTANCE.easiumEnchantability.get();
+        }
+        if(CommonConfig.CONFIG_SPEC.isLoaded() && MEDIUM == this){
+            return CommonConfig.INSTANCE.mediumEnchantability.get();
+        }
+        if(CommonConfig.CONFIG_SPEC.isLoaded() && HARDIUM == this){
+            return CommonConfig.INSTANCE.hardiumEnchantability.get();
+        }
         return this.enchantmentValue;
     }
 
@@ -99,10 +121,30 @@ public enum AQOArmoMaterials implements ArmorMaterial {
     }
 
     public float getToughness() {
+        if(CommonConfig.CONFIG_SPEC.isLoaded() && EASIUM == this){
+            return CommonConfig.INSTANCE.easiumToughness.get().floatValue();
+        }
+        if(CommonConfig.CONFIG_SPEC.isLoaded() && MEDIUM == this){
+            return CommonConfig.INSTANCE.mediumToughness.get().floatValue();
+        }
+        if(CommonConfig.CONFIG_SPEC.isLoaded() && HARDIUM == this){
+            return CommonConfig.INSTANCE.hardiumToughness.get().floatValue();
+        }
         return this.toughness;
     }
 
     public float getKnockbackResistance() {
+        if(CommonConfig.CONFIG_SPEC.isLoaded()){
+            if(EASIUM == this) {
+                return CommonConfig.INSTANCE.easiumKnockbackResistance.get().floatValue();
+            }
+            if(MEDIUM == this) {
+                return CommonConfig.INSTANCE.mediumKnockbackResistance.get().floatValue();
+            }
+            if(HARDIUM == this) {
+                return CommonConfig.INSTANCE.hardiumKnockbackResistance.get().floatValue();
+            }
+        }
         return this.knockbackResistance;
     }
 
