@@ -11,7 +11,7 @@ import net.minecraft.world.item.ItemStack;
 public class ItemInit {
 
     public static final RegistrationProvider<Item> ITEMS = RegistrationProvider.get(Registry.ITEM, Constants.MODID);
-
+//e
     public static Item.Properties getItemProperties() {
         return new Item.Properties().tab(Services.PLATFORM.getCreativeModeTab());
     }
