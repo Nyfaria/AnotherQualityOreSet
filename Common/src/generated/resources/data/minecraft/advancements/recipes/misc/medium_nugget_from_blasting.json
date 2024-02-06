@@ -37,6 +37,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_medium_hammer": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:medium_hammer"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_medium_helmet": {
       "conditions": {
         "items": [
@@ -67,6 +79,18 @@
           {
             "items": [
               "anotherqualityoreset:medium_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_medium_paxel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:medium_paxel"
             ]
           }
         ]
@@ -109,6 +133,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_medium_tree_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:medium_tree_axe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "minecraft:medium_nugget_from_blasting"
@@ -127,6 +163,9 @@
       "has_medium_chestplate",
       "has_medium_leggings",
       "has_medium_boots",
+      "has_medium_paxel",
+      "has_medium_hammer",
+      "has_medium_tree_axe",
       "has_the_recipe"
     ]
   ],

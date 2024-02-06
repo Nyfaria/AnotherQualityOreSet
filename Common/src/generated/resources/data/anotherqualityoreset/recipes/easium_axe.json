@@ -10,9 +10,9 @@
     }
   },
   "pattern": [
-    "XX ",
-    "X# ",
-    " # "
+    "XX",
+    "X#",
+    " #"
   ],
   "result": {
     "item": "anotherqualityoreset:easium_axe"

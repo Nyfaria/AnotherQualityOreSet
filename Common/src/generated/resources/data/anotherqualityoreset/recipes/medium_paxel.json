@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "A": {
+      "item": "anotherqualityoreset:medium_axe"
+    },
+    "P": {
+      "item": "anotherqualityoreset:medium_pickaxe"
+    },
+    "S": {
+      "item": "anotherqualityoreset:medium_shovel"
+    }
+  },
+  "pattern": [
+    "PAS",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "item": "anotherqualityoreset:medium_paxel"
+  },
+  "show_notification": true
+}

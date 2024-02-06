@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": [
+    {
+      "item": "anotherqualityoreset:medium_pickaxe"
+    },
+    {
+      "item": "anotherqualityoreset:medium_shovel"
+    },
+    {
+      "item": "anotherqualityoreset:medium_axe"
+    },
+    {
+      "item": "anotherqualityoreset:medium_hoe"
+    },
+    {
+      "item": "anotherqualityoreset:medium_sword"
+    },
+    {
+      "item": "anotherqualityoreset:medium_helmet"
+    },
+    {
+      "item": "anotherqualityoreset:medium_chestplate"
+    },
+    {
+      "item": "anotherqualityoreset:medium_leggings"
+    },
+    {
+      "item": "anotherqualityoreset:medium_boots"
+    }
+  ],
+  "result": "anotherqualityoreset:medium_nugget"
+}

@@ -37,6 +37,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_hardium_hammer": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:hardium_hammer"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_hardium_helmet": {
       "conditions": {
         "items": [
@@ -67,6 +79,18 @@
           {
             "items": [
               "anotherqualityoreset:hardium_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_hardium_paxel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:hardium_paxel"
             ]
           }
         ]
@@ -109,6 +133,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_hardium_tree_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:hardium_tree_axe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "minecraft:hardium_nugget_from_blasting"
@@ -127,6 +163,9 @@
       "has_hardium_chestplate",
       "has_hardium_leggings",
       "has_hardium_boots",
+      "has_hardium_paxel",
+      "has_hardium_hammer",
+      "has_hardium_tree_axe",
       "has_the_recipe"
     ]
   ],

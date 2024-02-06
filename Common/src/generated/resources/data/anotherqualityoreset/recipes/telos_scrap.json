@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:dragon_breath"
+    },
+    "I": {
+      "item": "anotherqualityoreset:hardium_ingot"
+    },
+    "R": {
+      "item": "anotherqualityoreset:hardium_rod"
+    }
+  },
+  "pattern": [
+    "RIR",
+    "IBI",
+    "RIR"
+  ],
+  "result": {
+    "item": "anotherqualityoreset:telos_scrap"
+  },
+  "show_notification": true
+}

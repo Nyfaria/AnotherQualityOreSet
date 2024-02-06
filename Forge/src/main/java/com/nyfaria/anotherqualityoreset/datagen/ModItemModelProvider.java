@@ -3,6 +3,8 @@ package com.nyfaria.anotherqualityoreset.datagen;
 import com.nyfaria.anotherqualityoreset.Constants;
 import com.nyfaria.anotherqualityoreset.api.OreCollection;
 import com.nyfaria.anotherqualityoreset.init.BlockInit;
+import com.nyfaria.anotherqualityoreset.init.ItemInit;
+import com.nyfaria.anotherqualityoreset.registration.RegistryObject;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -28,6 +30,14 @@ public class ModItemModelProvider extends ItemModelProvider {
                 BlockInit.HARDIUM_ORE
         ).forEach(this::oreCollection);
         simpleBlockItemModel(BlockInit.DEEPSLATE_EASIUM_ORE.get());
+        Stream.of(
+                ItemInit.TELOS_HELMET,
+                ItemInit.TELOS_CHESTPLATE,
+                ItemInit.TELOS_LEGGINGS,
+                ItemInit.TELOS_BOOTS,
+                ItemInit.TELOS_SCRAP
+        ).map(RegistryObject::get).forEach(this::simpleGeneratedModel);
+        simpleHandHeldModel(ItemInit.TELOS_SWORD.get());
     }
 
     public void oreCollection(OreCollection collection){
@@ -42,6 +52,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleHandHeldModel(collection.pickaxe().get());
         simpleHandHeldModel(collection.shovel().get());
         simpleHandHeldModel(collection.sword().get());
+        simpleHandHeldModel(collection.paxel().get());
+        simpleHandHeldModel(collection.hammer().get());
+        simpleHandHeldModel(collection.treeAxe().get());
         simpleGeneratedModel(collection.helmet().get());
         simpleGeneratedModel(collection.chestplate().get());
         simpleGeneratedModel(collection.leggings().get());
