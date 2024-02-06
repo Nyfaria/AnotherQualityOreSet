@@ -1,15 +1,12 @@
 package com.nyfaria.anotherqualityoreset.api;
 
 import com.nyfaria.anotherqualityoreset.init.BlockInit;
+import com.nyfaria.anotherqualityoreset.init.ItemInit;
 import com.nyfaria.anotherqualityoreset.init.TagInit;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.util.LazyLoadedValue;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 
 import javax.annotation.Nullable;
@@ -18,7 +15,8 @@ import java.util.function.Supplier;
 public enum AQOToolTiers implements Tier {
     EASIUM(3, 250, 6.0F, 2.0F, 14, () -> Ingredient.of(BlockInit.EASIUM_ORE.ingot().get()), TagInit.NEEDS_TOOL_LEVEL_4,3),
     MEDIUM(4, 1561, 8.0F, 3.0F, 10, () -> Ingredient.of(BlockInit.MEDIUM_ORE.ingot().get()), TagInit.NEEDS_TOOL_LEVEL_5,5),
-    HARDIUM(5, 2031, 9.0F, 4.0F, 15, () -> Ingredient.of(BlockInit.HARDIUM_ORE.ingot().get()), TagInit.NEEDS_TOOL_LEVEL_6,7);
+    HARDIUM(5, 2031, 9.0F, 4.0F, 15, () -> Ingredient.of(BlockInit.HARDIUM_ORE.ingot().get()), TagInit.NEEDS_TOOL_LEVEL_6,7),
+    TELOS(6, 2500, 10.0F, 5.0F, 20, () -> Ingredient.of(ItemInit.TELOS_SCRAP.get()), TagInit.NEEDS_TOOL_LEVEL_6,0);
 
     private final int level;
     private final int uses;

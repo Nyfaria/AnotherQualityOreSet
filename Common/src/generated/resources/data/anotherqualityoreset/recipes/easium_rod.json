@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "anotherqualityoreset:easium_ingot"
+    }
+  },
+  "pattern": [
+    "  X",
+    " X ",
+    "#  "
+  ],
+  "result": {
+    "item": "anotherqualityoreset:easium_rod"
+  },
+  "show_notification": true
+}

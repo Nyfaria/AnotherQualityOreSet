@@ -37,6 +37,9 @@ public class ModLangProvider extends LanguageProvider {
         EntityInit.ENTITIES.getEntries().forEach(this::entityLang);
         BlockInit.BLOCKS.getEntries().forEach(this::blockLang);
         add("itemGroup." + Constants.MODID + ".creative_mode_tab", "Another Quality Ore Set");
+        add("item." + Constants.MODID + ".aqo_armor_item.elytra_tooltip", "   Elytra Flight");
+        add("item." + Constants.MODID + ".aqo_armor_item.durability", "   Infinite Durability");
+        add("item." + Constants.MODID + ".aqo_armor_item.tooltip","4 Set Bonus:");
     }
 
     protected void itemLang(RegistryObject<Item> entry) {

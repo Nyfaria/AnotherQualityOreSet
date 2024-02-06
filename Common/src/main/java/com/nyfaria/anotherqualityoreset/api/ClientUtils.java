@@ -2,6 +2,8 @@ package com.nyfaria.anotherqualityoreset.api;
 
 import com.nyfaria.anotherqualityoreset.init.BlockInit;
 import net.minecraft.client.Minecraft;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 
 public class ClientUtils {
@@ -16,5 +18,9 @@ public class ClientUtils {
             }
         }
         return new ItemStack(BlockInit.EASIUM_ORE.ore().get());
+    }
+
+    public static Player getClientPlayer() {
+        return Minecraft.getInstance().player;
     }
 }

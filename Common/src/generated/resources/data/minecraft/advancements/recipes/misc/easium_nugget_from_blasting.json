@@ -37,6 +37,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_easium_hammer": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:easium_hammer"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_easium_helmet": {
       "conditions": {
         "items": [
@@ -67,6 +79,18 @@
           {
             "items": [
               "anotherqualityoreset:easium_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_easium_paxel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:easium_paxel"
             ]
           }
         ]
@@ -109,6 +133,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_easium_tree_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "anotherqualityoreset:easium_tree_axe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "minecraft:easium_nugget_from_blasting"
@@ -127,6 +163,9 @@
       "has_easium_chestplate",
       "has_easium_leggings",
       "has_easium_boots",
+      "has_easium_paxel",
+      "has_easium_hammer",
+      "has_easium_tree_axe",
       "has_the_recipe"
     ]
   ],

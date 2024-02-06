@@ -10,9 +10,9 @@
     }
   },
   "pattern": [
-    "XX ",
-    " # ",
-    " # "
+    "XX",
+    " #",
+    " #"
   ],
   "result": {
     "item": "anotherqualityoreset:medium_hoe"
