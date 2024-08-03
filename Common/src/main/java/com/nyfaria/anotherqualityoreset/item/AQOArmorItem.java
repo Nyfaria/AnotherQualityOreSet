@@ -8,6 +8,7 @@ import com.nyfaria.anotherqualityoreset.api.ClientUtils;
 import com.nyfaria.anotherqualityoreset.config.CommonConfig;
 import net.minecraft.ChatFormatting;
 import net.minecraft.Util;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
