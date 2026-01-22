@@ -59,6 +59,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleGeneratedModel(collection.chestplate().get());
         simpleGeneratedModel(collection.leggings().get());
         simpleGeneratedModel(collection.boots().get());
+        simpleGeneratedModel(collection.rod().get());
     }
 
     protected ItemModelBuilder simpleBlockItemModel(Block block) {

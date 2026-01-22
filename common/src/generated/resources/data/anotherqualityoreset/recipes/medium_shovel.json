@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": {
-      "item": "minecraft:stick"
+      "item": "anotherqualityoreset:medium_rod"
     },
     "X": {
       "item": "anotherqualityoreset:medium_ingot"

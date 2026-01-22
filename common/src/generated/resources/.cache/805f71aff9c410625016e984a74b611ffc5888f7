@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-05T09:56:23.4427846	Item Models: anotherqualityoreset
+// 1.20.1	2026-01-22T11:31:36.5145754	Item Models: anotherqualityoreset
 48f699dda4cc82c214ce403df37449d81ed9e10d assets/anotherqualityoreset/models/item/deepslate_easium_ore.json
 92d2cbd43e9fcf5acb67c4d47f0b1e9576c188dd assets/anotherqualityoreset/models/item/easium_axe.json
 4ab74cd08c075d6449d2a2ffe168013fd1bb044c assets/anotherqualityoreset/models/item/easium_block.json
@@ -13,6 +13,7 @@ d8012880bc251c396d3a0c0ad71b55872a5ed07e assets/anotherqualityoreset/models/item
 8e9a2563875aa268243e8bd094734c7acf78cb76 assets/anotherqualityoreset/models/item/easium_ore.json
 75583475fd20bd9e7ef665384418ccc6b020c6c7 assets/anotherqualityoreset/models/item/easium_paxel.json
 f501b98159afb0c39add4b519c8372867bc4e4f1 assets/anotherqualityoreset/models/item/easium_pickaxe.json
+7d42c3d59f6c6f2f7e4a49cc214586c67e53af1a assets/anotherqualityoreset/models/item/easium_rod.json
 004273d44689ff33e54114221932ef5de7021f37 assets/anotherqualityoreset/models/item/easium_shovel.json
 b74358a07f8f4d4d429fd0f99d0caf64b80ca94f assets/anotherqualityoreset/models/item/easium_sword.json
 a57be5b7a555725ef2546b2343bc685fe8e4cdab assets/anotherqualityoreset/models/item/easium_tree_axe.json
@@ -29,6 +30,7 @@ aa58292243e29b3b7e411f9d68af6273b4e0d42e assets/anotherqualityoreset/models/item
 d76af27d7d3b09f3c3839874e962911ce99e80a4 assets/anotherqualityoreset/models/item/hardium_ore.json
 c2c622bb76eede91453f34e0996d40491f67fd30 assets/anotherqualityoreset/models/item/hardium_paxel.json
 ec831fa42c9b72766e7c13651d03a4ac1b3ff991 assets/anotherqualityoreset/models/item/hardium_pickaxe.json
+0f70e659d2555b753eecb303ff6651ca017a61b7 assets/anotherqualityoreset/models/item/hardium_rod.json
 fb6e73114ae138c9ffab6075d153fd340d100568 assets/anotherqualityoreset/models/item/hardium_shovel.json
 0a7102f7fe89d96081e92eedb019ccf18dd97ed0 assets/anotherqualityoreset/models/item/hardium_sword.json
 8e7c826dbb9beeaecab5d6b60bd8ae8c57f95a29 assets/anotherqualityoreset/models/item/hardium_tree_axe.json
@@ -45,6 +47,7 @@ f70e7959bd9d9ccb2182b1c31dd3df93858986e7 assets/anotherqualityoreset/models/item
 87b3be0bf52b61443f6b60a4cacbf6ec36c0988a assets/anotherqualityoreset/models/item/medium_ore.json
 595b93aefdd92a1ca524d53c65ba00728a50ecdd assets/anotherqualityoreset/models/item/medium_paxel.json
 72d8d8c29b150eebd002a5f3791b01c24e12d6ac assets/anotherqualityoreset/models/item/medium_pickaxe.json
+66b74e884fbaed1367c047dcd2a4fa345107b1b9 assets/anotherqualityoreset/models/item/medium_rod.json
 2f761bf22a121bffc08794031f82ac62f65dd401 assets/anotherqualityoreset/models/item/medium_shovel.json
 949e6d1d5a56fd3ae140920da44efafc9729e056 assets/anotherqualityoreset/models/item/medium_sword.json
 c83492b99c0e1eb5b4a796df009a84e2139756a2 assets/anotherqualityoreset/models/item/medium_tree_axe.json

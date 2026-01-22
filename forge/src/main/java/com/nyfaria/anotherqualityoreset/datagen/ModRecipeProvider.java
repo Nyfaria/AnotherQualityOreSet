@@ -61,7 +61,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("X")
                 .pattern("X")
                 .pattern("#")
-                .define('X', ItemInit.TELOS_SCRAP.get())
+                .define('X', BlockInit.HARDIUM_ORE.rod().get())
                 .define('#', Items.STICK)
                 .unlockedBy("has_item", has(ItemInit.TELOS_SCRAP.get()))
                 .save(pWriter);
@@ -84,7 +84,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("X#")
                 .pattern(" #")
                 .define('X', collection.ingot().get())
-                .define('#', Items.STICK)
+                .define('#', collection.rod().get())
                 .unlockedBy("has_item", has(collection.ingot().get()))
                 .save(recipeSaver);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, collection.hoe().get())
@@ -92,7 +92,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern(" #")
                 .pattern(" #")
                 .define('X', collection.ingot().get())
-                .define('#', Items.STICK)
+                .define('#', collection.rod().get())
                 .unlockedBy("has_item", has(collection.ingot().get()))
                 .save(recipeSaver);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, collection.pickaxe().get())
@@ -100,7 +100,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern(" # ")
                 .pattern(" # ")
                 .define('X', collection.ingot().get())
-                .define('#', Items.STICK)
+                .define('#', collection.rod().get())
                 .unlockedBy("has_item", has(collection.ingot().get()))
                 .save(recipeSaver);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, collection.shovel().get())
@@ -108,7 +108,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("#")
                 .pattern("#")
                 .define('X', collection.ingot().get())
-                .define('#', Items.STICK)
+                .define('#', collection.rod().get())
                 .unlockedBy("has_item", has(collection.ingot().get()))
                 .save(recipeSaver);
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, collection.sword().get())
@@ -116,7 +116,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("X")
                 .pattern("#")
                 .define('X', collection.ingot().get())
-                .define('#', Items.STICK)
+                .define('#', collection.rod().get())
                 .unlockedBy("has_item", has(collection.ingot().get()))
                 .save(recipeSaver);
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, collection.helmet().get())
@@ -152,7 +152,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('P', collection.pickaxe().get())
                 .define('A', collection.axe().get())
                 .define('S', collection.shovel().get())
-                .define('#', Items.STICK)
+                .define('#', collection.rod().get())
                 .unlockedBy("has_item", has(collection.ingot().get()))
                 .save(recipeSaver);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, collection.hammer().get())
@@ -160,7 +160,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern(" # ")
                 .pattern(" # ")
                 .define('X', collection.block().get())
-                .define('#', Items.STICK)
+                .define('#', collection.rod().get())
                 .unlockedBy("has_item", has(collection.ingot().get()))
                 .save(recipeSaver);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, collection.treeAxe().get())
@@ -169,7 +169,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern(" #")
                 .define('X', collection.ingot().get())
                 .define('B', collection.block().get())
-                .define('#', Items.STICK)
+                .define('#', collection.rod().get())
                 .unlockedBy("has_item", has(collection.ingot().get()))
                 .save(recipeSaver);
         oreSmelting(recipeSaver, List.of(collection.ore().get(), collection.rawOre().get()), RecipeCategory.BUILDING_BLOCKS, collection.ingot().get(), 1.0f, 200, collection.name());

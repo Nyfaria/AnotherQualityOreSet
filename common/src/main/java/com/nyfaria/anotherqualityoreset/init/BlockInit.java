@@ -28,8 +28,8 @@ public class BlockInit {
 //    public static final RegistryObject<DropExperienceBlock> HARDIUM_ORE = registerBlock("hardium_ore", ()-> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.ANCIENT_DEBRIS), UniformInt.of(6,9)));
 
     public static final OreCollection EASIUM_ORE = OreCollection.of(AQOArmoMaterials.EASIUM, AQOToolTiers.EASIUM);
-    public static final OreCollection MEDIUM_ORE = OreCollection.of(AQOArmoMaterials.MEDIUM, AQOToolTiers.MEDIUM, () -> new MobEffectInstance(MobEffects.WATER_BREATHING, 20 * 3, 0));
-    public static final OreCollection HARDIUM_ORE = OreCollection.of(AQOArmoMaterials.HARDIUM, AQOToolTiers.HARDIUM, ()-> new MobEffectInstance(MobEffects.WATER_BREATHING, 20 * 3, 0));
+    public static final OreCollection MEDIUM_ORE = OreCollection.of(AQOArmoMaterials.MEDIUM, AQOToolTiers.MEDIUM, () -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 20 * 3, 1));
+    public static final OreCollection HARDIUM_ORE = OreCollection.of(AQOArmoMaterials.HARDIUM, AQOToolTiers.HARDIUM, ()-> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 20 * 3, 2));
 
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         return registerBlock(name, block, b -> () -> new BlockItem(b.get(), ItemInit.getItemProperties()));
