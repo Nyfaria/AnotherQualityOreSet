@@ -1,5 +1,5 @@
-// 1.20.1	2024-01-17T22:45:49.9157062	Tags for minecraft:block mod id anotherqualityoreset
-5d10cc5d08f26a88e9e190ea06698868d0c3f8d0 data/anotherqualityoreset/tags/blocks/mineable_with_paxel.json
+// 1.20.1	2026-01-22T09:38:43.9027601	Tags for minecraft:block mod id anotherqualityoreset
+82362cfbd1836db13c7e9d36c8712821e795ac55 data/anotherqualityoreset/tags/blocks/mineable_with_paxel.json
 3aa2b43f8fc58251f8ffa0093a1b2b177a4d3a2e data/fabric/tags/blocks/needs_tool_level_4.json
 03b6c0d4492595bedc5be3d28942b087e7540c91 data/fabric/tags/blocks/needs_tool_level_5.json
 7185b9508c529ae564f96377dd3878223e2e0913 data/fabric/tags/blocks/needs_tool_level_6.json

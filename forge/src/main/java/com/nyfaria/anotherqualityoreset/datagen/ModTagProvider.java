@@ -1,22 +1,23 @@
 package com.nyfaria.anotherqualityoreset.datagen;
 
 import com.nyfaria.anotherqualityoreset.Constants;
-import com.nyfaria.anotherqualityoreset.init.BlockInit;
-import com.nyfaria.anotherqualityoreset.init.TagInit;
+import com.nyfaria.anotherqualityoreset.api.*;
+import com.nyfaria.anotherqualityoreset.init.*;
+import com.nyfaria.anotherqualityoreset.item.*;
+import com.nyfaria.anotherqualityoreset.registration.RegistryObject;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.TagsProvider;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
+import net.minecraft.tags.*;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.*;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -32,6 +33,16 @@ public class ModTagProvider {
 
         @Override
         protected void addTags(HolderLookup.Provider pProvider) {
+            populateTag(ItemTags.SHOVELS, OreCollection.SHOVEL.toArray(Supplier[]::new));
+            populateTag(ItemTags.PICKAXES, OreCollection.PICKAXE.toArray(Supplier[]::new));
+            populateTag(ItemTags.AXES, OreCollection.AXE.toArray(Supplier[]::new));
+            populateTag(ItemTags.HOES, OreCollection.HOE.toArray(Supplier[]::new));
+            populateTag(ItemTags.SWORDS, OreCollection.SWORD.toArray(Supplier[]::new));
+            populateTag(ItemTags.SHOVELS, OreCollection.PAXEL.toArray(Supplier[]::new));
+            populateTag(ItemTags.PICKAXES, OreCollection.PAXEL.toArray(Supplier[]::new));
+            populateTag(ItemTags.PICKAXES, OreCollection.HAMMER.toArray(Supplier[]::new));
+            populateTag(ItemTags.AXES, OreCollection.PAXEL.toArray(Supplier[]::new));
+            populateTag(ItemTags.AXES, OreCollection.TREE_AXE.toArray(Supplier[]::new));
 
         }
 
@@ -74,7 +85,8 @@ public class ModTagProvider {
             populateTag(TagInit.NEEDS_TOOL_LEVEL_5,
                     ()->BlockInit.HARDIUM_ORE.block().get());
 
-            tag(TagInit.MINEABLE_WITH_PAXEL).addTags(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.MINEABLE_WITH_AXE);
+            tag(TagInit.MINEABLE_WITH_PAXEL).addTags(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.MINEABLE_WITH_AXE, BlockTags.MINEABLE_WITH_SHOVEL);
+
         }
 
         public  <T extends Block>void populateTag(TagKey<Block> tag, Supplier<?>... items){

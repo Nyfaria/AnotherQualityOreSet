@@ -62,7 +62,7 @@ public abstract class AQOArmorItemMixin extends ArmorItem implements GeoItem, Fa
             @Override
             public HumanoidModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, HumanoidModel<LivingEntity> original) {
                 if(this.renderer == null) // Important that we do this. If we just instantiate  it directly in the field it can cause incompatibilities with some mods.
-                    this.renderer = new GeoArmorRenderer<>(new DefaultedItemGeoModel<>(new ResourceLocation(Constants.MODID, "armor/" + ((AQOArmorItem)(Object)this).getMaterial().getName().toLowerCase())));
+                    this.renderer = new GeoArmorRenderer<>(new DefaultedItemGeoModel<>(new ResourceLocation(Constants.MODID, "armor/" + ((AQOArmorItem)itemStack.getItem()).getMaterial().getName().toLowerCase() + "_armor")));
 
                 // This prepares our GeoArmorRenderer for the current render frame.
                 // These parameters may be null however, so we don't do anything further with them

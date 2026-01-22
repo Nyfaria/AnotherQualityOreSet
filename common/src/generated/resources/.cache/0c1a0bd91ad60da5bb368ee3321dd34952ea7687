@@ -1,1 +1,6 @@
-// 1.20.1	2024-01-17T16:45:45.0552995	Tags for minecraft:item mod id anotherqualityoreset
+// 1.20.1	2026-01-22T09:38:43.9017962	Tags for minecraft:item mod id anotherqualityoreset
+9d37bbda14b5f685ba3d39d3c3f81e798b50efd7 data/minecraft/tags/items/axes.json
+d21d702af242c4749228a446915c4aa34fb53a9f data/minecraft/tags/items/hoes.json
+821d8c6ecd87b93854c1be748dbc8855e5b1680a data/minecraft/tags/items/pickaxes.json
+d05b34868ef518a98a1b97f3370c787393c36536 data/minecraft/tags/items/shovels.json
+e5749c2bdff53cfe7117a63a7917412d8469b6bf data/minecraft/tags/items/swords.json
