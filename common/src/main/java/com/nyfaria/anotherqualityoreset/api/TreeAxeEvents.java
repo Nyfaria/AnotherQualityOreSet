@@ -11,14 +11,14 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
-import javax.annotation.Nonnull;
+
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import static net.minecraft.world.InteractionHand.MAIN_HAND;
 
 public class TreeAxeEvents {
-    public static boolean canPlayerBreakTree(@Nonnull Player player, BlockPos pos) {
+    public static boolean canPlayerBreakTree( Player player, BlockPos pos) {
         Item heldItem = player.getItemInHand(MAIN_HAND).getItem();
         return (heldItem instanceof TreeAxeItem);
     }

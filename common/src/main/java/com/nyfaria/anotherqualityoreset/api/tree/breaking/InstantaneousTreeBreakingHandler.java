@@ -7,7 +7,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
-import javax.annotation.Nonnull;
+
 import java.util.Comparator;
 
 import static net.minecraft.stats.Stats.ITEM_USED;
@@ -25,7 +25,7 @@ public class InstantaneousTreeBreakingHandler implements ITreeBreakingHandler{
 	}
 
 	
-	private boolean destroy(@Nonnull Tree tree, @Nonnull Player player, @Nonnull ItemStack tool){
+	private boolean destroy( Tree tree,  Player player,  ItemStack tool){
 		Level world = tree.getWorld();
 		int breakableCount = tree.getBreakableCount();
 		int damageMultiplicand = 0;
@@ -58,7 +58,7 @@ public class InstantaneousTreeBreakingHandler implements ITreeBreakingHandler{
 		return true;
 	}
 	
-	private static void forceBreakDecayLeaves(@Nonnull Tree tree, Level world){
+	private static void forceBreakDecayLeaves( Tree tree, Level world){
 		int radius = 5;
 	}
 	

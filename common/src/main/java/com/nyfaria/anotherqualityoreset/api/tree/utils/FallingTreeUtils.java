@@ -7,7 +7,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
-import javax.annotation.Nonnull;
+
 import java.util.Collection;
 import java.util.Objects;
 import java.util.Optional;
@@ -30,7 +30,7 @@ public class FallingTreeUtils {
 
 	}
 	
-	@Nonnull
+	
 	public static Stream<Item> getItem(String name){
 		try{
 			boolean isTag = name.startsWith("#");
@@ -60,7 +60,7 @@ public class FallingTreeUtils {
 				.collect(toSet());
 	}
 	
-	@Nonnull
+	
 	public static Stream<Block> getBlock(String name){
 		try{
 			boolean isTag = name.startsWith("#");
@@ -81,7 +81,7 @@ public class FallingTreeUtils {
 		}
 	}
 	
-	public static boolean isLeafBlock(@Nonnull Block block){
+	public static boolean isLeafBlock( Block block){
 		boolean isWhitelistedBlock = block.defaultBlockState().is(LEAVES);
 		if(isWhitelistedBlock){
 			return true;

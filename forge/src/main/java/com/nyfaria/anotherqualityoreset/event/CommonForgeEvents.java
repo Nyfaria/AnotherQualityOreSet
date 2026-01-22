@@ -10,7 +10,7 @@ import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-import javax.annotation.Nonnull;
+
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class CommonForgeEvents {
@@ -20,7 +20,7 @@ public class CommonForgeEvents {
     }
 
     @SubscribeEvent
-    public static void onBlockBreakEvent(@Nonnull BlockEvent.BreakEvent event) {
+    public static void onBlockBreakEvent( BlockEvent.BreakEvent event) {
         if (!event.isCanceled() && !event.getLevel().isClientSide()) {
             BlockPos thePos = event.getPos();
             HammerEvents.breakBlock((ServerPlayer) event.getPlayer(), thePos, event.getPlayer().getMainHandItem());

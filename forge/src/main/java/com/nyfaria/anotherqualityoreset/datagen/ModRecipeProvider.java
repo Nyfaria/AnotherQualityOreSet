@@ -66,12 +66,13 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_item", has(ItemInit.TELOS_SCRAP.get()))
                 .save(pWriter);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ItemInit.TELOS_SCRAP.get())
-                .pattern("RIR")
-                .pattern("IBI")
-                .pattern("RIR")
-                .define('R', BlockInit.HARDIUM_ORE.rod().get())
-                .define('I', BlockInit.HARDIUM_ORE.ingot().get())
-                .define('B', Items.DRAGON_BREATH)
+                .pattern("MEH")
+                .pattern("EDE")
+                .pattern("HEM")
+                .define('E', BlockInit.EASIUM_ORE.rod().get())
+                .define('M', BlockInit.MEDIUM_ORE.rod().get())
+                .define('H', BlockInit.HARDIUM_ORE.rod().get())
+                .define('D', Items.DRAGON_BREATH)
                 .unlockedBy("has_item", has(Items.DRAGON_BREATH))
                 .save(pWriter);
 

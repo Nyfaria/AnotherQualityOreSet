@@ -62,6 +62,7 @@ dependencies {
             classifier = 'processor'
         }
     }
+    jarJar(libs.mixin.extras)
     modImplementation libs.cap.syncer
     jarJar(libs.cap.syncer)
     modImplementation(libs.geckolib.forge)

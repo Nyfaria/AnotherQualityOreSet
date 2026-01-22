@@ -34,7 +34,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 import java.util.EnumMap;
 import java.util.List;
 import java.util.UUID;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 public class AQOArmorItem extends ArmorItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
@@ -219,8 +219,10 @@ public class AQOArmorItem extends ArmorItem implements GeoItem {
 
 
 
-
-
+    public Supplier<Object> getRenderProvider() {
+        return null;
+    }
+    public void createRenderer(Consumer<Object> consumer) {}
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {

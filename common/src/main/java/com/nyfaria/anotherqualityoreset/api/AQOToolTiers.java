@@ -9,7 +9,6 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
 
-import javax.annotation.Nullable;
 import java.util.function.Supplier;
 
 public enum AQOToolTiers implements Tier {
@@ -61,7 +60,7 @@ public enum AQOToolTiers implements Tier {
     public Ingredient getRepairIngredient() {
         return this.repairIngredient.get();
     }
-    @Nullable
+
     public TagKey<Block> getTag() { return tag; }
 
     public int getBreakRadius() {

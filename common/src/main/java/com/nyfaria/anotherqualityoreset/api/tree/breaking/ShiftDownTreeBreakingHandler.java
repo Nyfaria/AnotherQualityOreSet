@@ -8,7 +8,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
-import javax.annotation.Nonnull;
+
 
 import static net.minecraft.stats.Stats.ITEM_USED;
 import static net.minecraft.world.InteractionHand.MAIN_HAND;
@@ -22,7 +22,7 @@ public class ShiftDownTreeBreakingHandler implements ITreeBreakingHandler {
         return true;
     }
 
-    private void destroy(@Nonnull Tree tree, @Nonnull Player player, @Nonnull ItemStack tool) {
+    private void destroy( Tree tree,  Player player,  ItemStack tool) {
         Level world = tree.getWorld();
         int damageMultiplicand = 0;
         int toolUsesLeft = tool.isDamageableItem() ? (tool.getMaxDamage() - tool.getDamageValue()) : Integer.MAX_VALUE;

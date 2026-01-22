@@ -33,10 +33,10 @@ public abstract class AQOArmorItemMixin extends ArmorItem implements GeoItem, Fa
         super(pMaterial, pType, pProperties);
     }
 
-    @Override
+
     public boolean useCustomElytra(LivingEntity entity, ItemStack chestStack, boolean tickElytra) {
         if(entity instanceof Player player) {
-            if(((AQOArmorItem)(Object)this).isWearingSet(player) && getMaterial() == AQOArmoMaterials.TELOS){
+            if(((AQOArmorItem)(Object)this).isWearingSet(player) && (getMaterial() == AQOArmoMaterials.TELOS || getMaterial() == AQOArmoMaterials.HARDIUM)){
                 if(tickElytra){
                     doVanillaElytraTick(player, chestStack);
                 }
@@ -45,7 +45,7 @@ public abstract class AQOArmorItemMixin extends ArmorItem implements GeoItem, Fa
         }
         return false;
     }
-    @Override
+
     public void doVanillaElytraTick(LivingEntity entity, ItemStack chestStack) {
         int nextRoll = entity.getFallFlyingTicks() + 1;
 
@@ -54,7 +54,7 @@ public abstract class AQOArmorItemMixin extends ArmorItem implements GeoItem, Fa
         }
     }
 
-    @Override
+
     public void createRenderer(Consumer<Object> consumer) {
         consumer.accept(new RenderProvider() {
             private GeoArmorRenderer<?> renderer;
@@ -73,7 +73,7 @@ public abstract class AQOArmorItemMixin extends ArmorItem implements GeoItem, Fa
         });
     }
 
-    @Override
+
     public Supplier<Object> getRenderProvider() {
         return this.renderProvider;
     }

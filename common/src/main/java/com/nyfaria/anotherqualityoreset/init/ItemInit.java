@@ -5,7 +5,7 @@ import com.nyfaria.anotherqualityoreset.api.AQOArmoMaterials;
 import com.nyfaria.anotherqualityoreset.api.AQOToolTiers;
 import com.nyfaria.anotherqualityoreset.api.ClientUtils;
 import com.nyfaria.anotherqualityoreset.api.OreCollection;
-import com.nyfaria.anotherqualityoreset.item.AQOArmorItem;
+import com.nyfaria.anotherqualityoreset.item.*;
 import com.nyfaria.anotherqualityoreset.registration.RegistrationProvider;
 import com.nyfaria.anotherqualityoreset.registration.RegistryObject;
 import net.minecraft.core.registries.Registries;
@@ -29,7 +29,7 @@ public class ItemInit {
     public static final RegistryObject<Item> TELOS_CHESTPLATE = ITEMS.register("telos_chestplate", () -> new AQOArmorItem(AQOArmoMaterials.TELOS, ArmorItem.Type.CHESTPLATE, getItemProperties(), () -> new MobEffectInstance(MobEffects.WATER_BREATHING)));
     public static final RegistryObject<Item> TELOS_LEGGINGS = ITEMS.register("telos_leggings", () -> new AQOArmorItem(AQOArmoMaterials.TELOS, ArmorItem.Type.LEGGINGS, getItemProperties(), () -> new MobEffectInstance(MobEffects.WATER_BREATHING)));
     public static final RegistryObject<Item> TELOS_BOOTS = ITEMS.register("telos_boots", () -> new AQOArmorItem(AQOArmoMaterials.TELOS, ArmorItem.Type.BOOTS, getItemProperties(), () -> new MobEffectInstance(MobEffects.WATER_BREATHING)));
-    public static final RegistryObject<Item> TELOS_SWORD = ITEMS.register("telos_sword", () -> new SwordItem(AQOToolTiers.TELOS, 3, -2.4f, getItemProperties()));
+    public static final RegistryObject<Item> TELOS_SWORD = ITEMS.register("telos_sword", () -> new TelosSwordItem(AQOToolTiers.TELOS, 3, -2.4f, getItemProperties()));
     public static final RegistryObject<CreativeModeTab> TAB = CREATIVE_MODE_TABS.register(Constants.MODID, () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
             .icon(ClientUtils::getTabIconItem)
             .displayItems(

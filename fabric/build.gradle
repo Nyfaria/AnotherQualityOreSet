@@ -23,7 +23,7 @@ dependencies {
     include(libs.fabric.config.api)
     modImplementation(libs.bundles.cc.all)
     include(libs.bundles.cc.all)
-    modImplementation(libs.geckolib.forge)
+    modImplementation(libs.geckolib.fabric)
 }
 
 loom {
