@@ -39,11 +39,11 @@ import java.util.function.Supplier;
 public class AQOArmorItem extends ArmorItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
-    private static final EnumMap<Type, UUID> ARMOR_MODIFIER_UUID_PER_TYPE = Util.make(new EnumMap<>(Type.class), ($$0) -> {
-        $$0.put(Type.BOOTS, UUID.fromString("845DB27C-C624-495F-8C9F-6020A9A58B6B"));
-        $$0.put(Type.LEGGINGS, UUID.fromString("D8499B04-0E66-4726-AB29-64469D734E0D"));
-        $$0.put(Type.CHESTPLATE, UUID.fromString("9F3D476D-C118-4544-8365-64846904B48E"));
-        $$0.put(Type.HELMET, UUID.fromString("2AD3F246-FEE1-4E67-B886-69FD380BB150"));
+    private static final EnumMap<Type, UUID> ARMOR_MODIFIER_UUID_PER_TYPE = Util.make(new EnumMap<>(Type.class), (typeMap) -> {
+        typeMap.put(Type.BOOTS, UUID.fromString("845DB27C-C624-495F-8C9F-6020A9A58B6B"));
+        typeMap.put(Type.LEGGINGS, UUID.fromString("D8499B04-0E66-4726-AB29-64469D734E0D"));
+        typeMap.put(Type.CHESTPLATE, UUID.fromString("9F3D476D-C118-4544-8365-64846904B48E"));
+        typeMap.put(Type.HELMET, UUID.fromString("2AD3F246-FEE1-4E67-B886-69FD380BB150"));
     });
     private final List<Supplier<MobEffectInstance>> effects;
     private Multimap<Attribute, AttributeModifier> defaultModifiers = null;
@@ -149,7 +149,7 @@ public class AQOArmorItem extends ArmorItem implements GeoItem {
 
     public boolean canElytraFly(ItemStack stack, LivingEntity entity) {
         if (entity instanceof Player player)
-            return isWearingSet(player) && getMaterial() == AQOArmoMaterials.TELOS;
+            return isWearingSet(player) && (getMaterial() == AQOArmoMaterials.TELOS || getMaterial() == AQOArmoMaterials.HARDIUM);
         return false;
     }
 

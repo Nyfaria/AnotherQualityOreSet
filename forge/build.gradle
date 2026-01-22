@@ -52,7 +52,6 @@ legacyForge {
 }
 sourceSets.main.resources {
     srcDir project(":common").file('src/generated/resources').getAbsolutePath()
-    srcDir project(":common").file('src/main/resources').getAbsolutePath()
 }
 
 
