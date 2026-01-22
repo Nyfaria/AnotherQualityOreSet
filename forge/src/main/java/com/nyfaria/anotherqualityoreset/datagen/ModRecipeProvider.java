@@ -30,7 +30,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 BlockInit.MEDIUM_ORE,
                 BlockInit.HARDIUM_ORE
         ).forEach(collection -> oreCollectionRecipes(collection, pWriter));
-        //telo recipes
+        //telos recipes
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ItemInit.TELOS_HELMET.get())
                 .pattern("XXX")
                 .pattern("X X")
@@ -61,7 +61,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("X")
                 .pattern("X")
                 .pattern("#")
-                .define('X', BlockInit.HARDIUM_ORE.rod().get())
+                .define('X', ItemInit.TELOS_SCRAP.get())
                 .define('#', Items.STICK)
                 .unlockedBy("has_item", has(ItemInit.TELOS_SCRAP.get()))
                 .save(pWriter);
