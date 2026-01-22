@@ -2,20 +2,23 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": {
+    "D": {
       "item": "minecraft:dragon_breath"
     },
-    "I": {
-      "item": "anotherqualityoreset:hardium_ingot"
+    "E": {
+      "item": "anotherqualityoreset:easium_rod"
     },
-    "R": {
+    "H": {
       "item": "anotherqualityoreset:hardium_rod"
+    },
+    "M": {
+      "item": "anotherqualityoreset:medium_rod"
     }
   },
   "pattern": [
-    "RIR",
-    "IBI",
-    "RIR"
+    "MEH",
+    "EDE",
+    "HEM"
   ],
   "result": {
     "item": "anotherqualityoreset:telos_scrap"
