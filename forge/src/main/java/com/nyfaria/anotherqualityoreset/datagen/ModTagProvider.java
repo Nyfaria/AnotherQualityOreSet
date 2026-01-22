@@ -87,6 +87,9 @@ public class ModTagProvider {
 
             tag(TagInit.MINEABLE_WITH_PAXEL).addTags(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.MINEABLE_WITH_AXE, BlockTags.MINEABLE_WITH_SHOVEL);
 
+            populateTag(TagInit.NETHER_ORE_REPLACEABLES, () -> Blocks.NETHERRACK);
+            populateTag(TagInit.END_ORE_REPLACEABLES, () -> Blocks.END_STONE);
+
         }
 
         public  <T extends Block>void populateTag(TagKey<Block> tag, Supplier<?>... items){

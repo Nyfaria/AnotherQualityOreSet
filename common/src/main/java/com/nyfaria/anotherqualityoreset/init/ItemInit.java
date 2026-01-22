@@ -25,10 +25,10 @@ public class ItemInit {
     public static final RegistrationProvider<Item> ITEMS = RegistrationProvider.get(Registries.ITEM, Constants.MODID);
     public static final RegistrationProvider<CreativeModeTab> CREATIVE_MODE_TABS = RegistrationProvider.get(Registries.CREATIVE_MODE_TAB, Constants.MODID);
     public static final RegistryObject<Item> TELOS_SCRAP = ITEMS.register("telos_scrap", () -> new Item(getItemProperties()));
-    public static final RegistryObject<Item> TELOS_HELMET = ITEMS.register("telos_helmet", () -> new AQOArmorItem(AQOArmoMaterials.TELOS, ArmorItem.Type.HELMET, getItemProperties(), () -> new MobEffectInstance(MobEffects.WATER_BREATHING)));
-    public static final RegistryObject<Item> TELOS_CHESTPLATE = ITEMS.register("telos_chestplate", () -> new AQOArmorItem(AQOArmoMaterials.TELOS, ArmorItem.Type.CHESTPLATE, getItemProperties(), () -> new MobEffectInstance(MobEffects.WATER_BREATHING)));
-    public static final RegistryObject<Item> TELOS_LEGGINGS = ITEMS.register("telos_leggings", () -> new AQOArmorItem(AQOArmoMaterials.TELOS, ArmorItem.Type.LEGGINGS, getItemProperties(), () -> new MobEffectInstance(MobEffects.WATER_BREATHING)));
-    public static final RegistryObject<Item> TELOS_BOOTS = ITEMS.register("telos_boots", () -> new AQOArmorItem(AQOArmoMaterials.TELOS, ArmorItem.Type.BOOTS, getItemProperties(), () -> new MobEffectInstance(MobEffects.WATER_BREATHING)));
+    public static final RegistryObject<Item> TELOS_HELMET = ITEMS.register("telos_helmet", () -> new AQOArmorItem(AQOArmoMaterials.TELOS, ArmorItem.Type.HELMET, getItemProperties(), () -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 20,3)));
+    public static final RegistryObject<Item> TELOS_CHESTPLATE = ITEMS.register("telos_chestplate", () -> new AQOArmorItem(AQOArmoMaterials.TELOS, ArmorItem.Type.CHESTPLATE, getItemProperties(), () -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE,20,3)));
+    public static final RegistryObject<Item> TELOS_LEGGINGS = ITEMS.register("telos_leggings", () -> new AQOArmorItem(AQOArmoMaterials.TELOS, ArmorItem.Type.LEGGINGS, getItemProperties(), () -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE,20,3)));
+    public static final RegistryObject<Item> TELOS_BOOTS = ITEMS.register("telos_boots", () -> new AQOArmorItem(AQOArmoMaterials.TELOS, ArmorItem.Type.BOOTS, getItemProperties(), () -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE,20,3)));
     public static final RegistryObject<Item> TELOS_SWORD = ITEMS.register("telos_sword", () -> new TelosSwordItem(AQOToolTiers.TELOS, 3, -2.4f, getItemProperties()));
     public static final RegistryObject<CreativeModeTab> TAB = CREATIVE_MODE_TABS.register(Constants.MODID, () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
             .icon(ClientUtils::getTabIconItem)
