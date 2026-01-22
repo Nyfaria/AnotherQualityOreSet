@@ -1,6 +1,7 @@
 package com.nyfaria.anotherqualityoreset.api;
 
 import com.nyfaria.anotherqualityoreset.init.BlockInit;
+import com.nyfaria.anotherqualityoreset.init.ItemInit;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.entity.player.Player;
@@ -10,14 +11,14 @@ public class ClientUtils {
     public static ItemStack getTabIconItem() {
         if (Minecraft.getInstance().level != null) {
             if (Minecraft.getInstance().level.getGameTime() % 120 < 40) {
-                return new ItemStack(BlockInit.EASIUM_ORE.ore().get());
+                return new ItemStack(BlockInit.EASIUM_ORE.sword().get());
             } else if (Minecraft.getInstance().level.getGameTime() % 120 < 80) {
-                return new ItemStack(BlockInit.MEDIUM_ORE.ore().get());
+                return new ItemStack(BlockInit.MEDIUM_ORE.sword().get());
             } else {
-                return new ItemStack(BlockInit.HARDIUM_ORE.ore().get());
+                return new ItemStack(BlockInit.HARDIUM_ORE.sword().get());
             }
         }
-        return new ItemStack(BlockInit.EASIUM_ORE.ore().get());
+        return new ItemStack(ItemInit.TELOS_SWORD.get());
     }
 
     public static Player getClientPlayer() {
