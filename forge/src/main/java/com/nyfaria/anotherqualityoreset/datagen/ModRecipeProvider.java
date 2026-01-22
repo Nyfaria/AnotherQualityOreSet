@@ -62,7 +62,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("X")
                 .pattern("#")
                 .define('X', ItemInit.TELOS_SCRAP.get())
-                .define('#', Items.STICK)
+                .define('#', BlockInit.HARDIUM_ORE.rod().get())
                 .unlockedBy("has_item", has(ItemInit.TELOS_SCRAP.get()))
                 .save(pWriter);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ItemInit.TELOS_SCRAP.get())

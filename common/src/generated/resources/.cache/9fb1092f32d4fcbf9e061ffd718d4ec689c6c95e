@@ -1,4 +1,4 @@
-// 1.20.1	2026-01-22T11:31:36.517586	Recipes
+// 1.20.1	2026-01-22T14:48:33.9225516	Recipes
 c74a31bfe494af8bfa9e6c29a21b8a5f911ddc86 data/anotherqualityoreset/advancements/recipes/combat/easium_boots.json
 e9ea3d841841974848e155d5b4ebacd9ba5c3a9a data/anotherqualityoreset/advancements/recipes/combat/easium_chestplate.json
 8471f43e57e85b497c08b60e0c9bcd8bbec8026a data/anotherqualityoreset/advancements/recipes/combat/easium_helmet.json
@@ -88,7 +88,7 @@ e9e72e06b9f64ff8625d5e666c5101480a039a00 data/anotherqualityoreset/recipes/telos
 8e37f9571955a83861c1400068012eb37da63011 data/anotherqualityoreset/recipes/telos_helmet.json
 312906d1243c27920b982473ffc3b57314f6cc1e data/anotherqualityoreset/recipes/telos_leggings.json
 42a36c95b2db16fcfcb064d53c20f66128405696 data/anotherqualityoreset/recipes/telos_scrap.json
-442be035c06d6ce3cf052891a0e12b7614e5f495 data/anotherqualityoreset/recipes/telos_sword.json
+19f3a23d4b52af09bc1e3243b2c59dde2307248b data/anotherqualityoreset/recipes/telos_sword.json
 b5d8c8e1459c75abff6bdf96cfa5f7f4fb2e84e2 data/minecraft/advancements/recipes/building_blocks/easium_block.json
 5e9a07ff793ee35cad4c30ede0ecc77c3de20b61 data/minecraft/advancements/recipes/building_blocks/easium_ingot_from_blasting_easium_ore.json
 136d9dfb8115ff3ebe4bf8d0d4812e09fc940549 data/minecraft/advancements/recipes/building_blocks/easium_ingot_from_blasting_raw_easium.json
