@@ -20,7 +20,7 @@ Wearing the whole set gives a fire resistance effect.
 
 The blue-themed Hardium set is the highest of the three tiers. It is crafted with hardium ore, which can only be mined at the end, and hardium.
 
-Wearing the whole set gives water breathing and elytra flight.
+Wearing the whole set gives fire resistance and elytra flight.
 
 # Three Special Tools
 
