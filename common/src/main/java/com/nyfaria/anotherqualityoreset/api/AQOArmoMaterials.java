@@ -89,13 +89,13 @@ public enum AQOArmoMaterials implements ArmorMaterial {
     public int getDefenseForType(ArmorItem.Type pType) {
         if(CommonConfig.CONFIG_SPEC.isLoaded()){
             if(EASIUM == this) {
-                return CommonConfig.INSTANCE.easiumDefense.get().get(pType.ordinal()).intValue();
+                return CommonConfig.INSTANCE.getEasiumDefense(pType);
             }
             if(MEDIUM == this) {
-                return CommonConfig.INSTANCE.mediumDefense.get().get(pType.ordinal()).intValue();
+                return CommonConfig.INSTANCE.getMediumDefense(pType);
             }
             if(HARDIUM == this) {
-                return CommonConfig.INSTANCE.hardiumDefense.get().get(pType.ordinal()).intValue();
+                return CommonConfig.INSTANCE.getHardiumDefense(pType);
             }
         }
 

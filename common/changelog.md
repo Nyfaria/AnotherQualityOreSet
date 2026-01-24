@@ -1,3 +1,10 @@
+## Version 2.0.2
+- Fixed log spam
+- Fixed Creative Mode Tab Crash
+
+## Version 2.0.1
+- Fixed Server Crash
+
 ## Version 2.0.0
 - Updated to 1.20.1
 - All new Artwork.

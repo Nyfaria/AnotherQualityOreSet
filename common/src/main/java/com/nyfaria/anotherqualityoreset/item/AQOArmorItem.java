@@ -1,39 +1,26 @@
 package com.nyfaria.anotherqualityoreset.item;
 
-import com.google.common.collect.ImmutableMultimap;
-import com.google.common.collect.Multimap;
-import com.nyfaria.anotherqualityoreset.Constants;
-import com.nyfaria.anotherqualityoreset.api.AQOArmoMaterials;
-import com.nyfaria.anotherqualityoreset.api.ClientUtils;
-import com.nyfaria.anotherqualityoreset.config.CommonConfig;
-import net.minecraft.ChatFormatting;
-import net.minecraft.Util;
-import net.minecraft.client.Minecraft;
-import net.minecraft.core.NonNullList;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.ai.attributes.Attribute;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.gameevent.GameEvent;
-import org.jetbrains.annotations.Nullable;
-import software.bernie.geckolib.animatable.GeoItem;
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.util.GeckoLibUtil;
+import com.google.common.collect.*;
+import com.nyfaria.anotherqualityoreset.*;
+import com.nyfaria.anotherqualityoreset.api.*;
+import com.nyfaria.anotherqualityoreset.config.*;
+import net.minecraft.*;
+import net.minecraft.core.*;
+import net.minecraft.network.chat.*;
+import net.minecraft.world.effect.*;
+import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.ai.attributes.*;
+import net.minecraft.world.entity.player.*;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.*;
+import net.minecraft.world.level.gameevent.*;
+import org.jetbrains.annotations.*;
+import software.bernie.geckolib.animatable.*;
+import software.bernie.geckolib.core.animatable.instance.*;
+import software.bernie.geckolib.core.animation.*;
+import software.bernie.geckolib.util.*;
 
-import java.util.EnumMap;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 import java.util.function.*;
 
 public class AQOArmorItem extends ArmorItem implements GeoItem {
@@ -76,16 +63,16 @@ public class AQOArmorItem extends ArmorItem implements GeoItem {
     public int getDefense() {
         if (CommonConfig.CONFIG_SPEC.isLoaded()) {
             if (AQOArmoMaterials.EASIUM == getMaterial()) {
-                return CommonConfig.INSTANCE.easiumDefense.get().get(this.getType().ordinal());
+                return CommonConfig.INSTANCE.getEasiumDefense(this.getType());
             }
             if (AQOArmoMaterials.MEDIUM == getMaterial()) {
-                return CommonConfig.INSTANCE.mediumDefense.get().get(this.getType().ordinal());
+                return CommonConfig.INSTANCE.getMediumDefense(this.getType());
             }
             if (AQOArmoMaterials.HARDIUM == getMaterial()) {
-                return CommonConfig.INSTANCE.hardiumDefense.get().get(this.getType().ordinal());
+                return CommonConfig.INSTANCE.getHardiumDefense(this.getType());
             }
             if (AQOArmoMaterials.TELOS == getMaterial()) {
-                return CommonConfig.INSTANCE.telosDefense.get().get(this.getType().ordinal());
+                return CommonConfig.INSTANCE.getTelosDefense(this.getType());
             }
         }
         return super.getDefense();
@@ -198,19 +185,16 @@ public class AQOArmorItem extends ArmorItem implements GeoItem {
     }
 
 
-
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag context) {
         super.appendHoverText(stack, level, tooltip, context);
-        if(canHaveSetBonus(null)){
-            ChatFormatting color = isWearingSet(ClientUtils.getClientPlayer()) ? ChatFormatting.GREEN : ChatFormatting.GRAY;
+        if (canHaveSetBonus(null) && level != null && level.isClientSide) {
+            ChatFormatting color = isWearingSet(ClientUtils2.getClientPlayer()) ? ChatFormatting.GREEN : ChatFormatting.GRAY;
             tooltip.add(Component.translatable("item." + Constants.MODID + ".aqo_armor_item.tooltip").withStyle(color));
-            effects.forEach(effect -> {
-                tooltip.add(Component.literal("   ").append(effect.get().getEffect().getDisplayName().copy().withStyle(color)));
-            });
+            effects.forEach(effect -> tooltip.add(Component.literal("   ").append(effect.get().getEffect().getDisplayName().copy().withStyle(color))));
             if (getMaterial() != AQOArmoMaterials.MEDIUM) {
                 tooltip.add(Component.translatable("item." + Constants.MODID + ".aqo_armor_item.elytra_tooltip").withStyle(color));
-                if(getMaterial() == AQOArmoMaterials.TELOS){
+                if (getMaterial() == AQOArmoMaterials.TELOS) {
                     tooltip.add(Component.translatable("item." + Constants.MODID + ".aqo_armor_item.durability").withStyle(color));
                 }
             }
@@ -218,11 +202,12 @@ public class AQOArmorItem extends ArmorItem implements GeoItem {
     }
 
 
-
     public Supplier<Object> getRenderProvider() {
         return null;
     }
-    public void createRenderer(Consumer<Object> consumer) {}
+
+    public void createRenderer(Consumer<Object> consumer) {
+    }
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {

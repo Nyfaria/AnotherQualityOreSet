@@ -1,11 +1,8 @@
 package com.nyfaria.anotherqualityoreset.api;
 
-import com.nyfaria.anotherqualityoreset.init.BlockInit;
-import com.nyfaria.anotherqualityoreset.init.ItemInit;
-import net.minecraft.client.Minecraft;
-import net.minecraft.core.NonNullList;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
+import com.nyfaria.anotherqualityoreset.init.*;
+import net.minecraft.client.*;
+import net.minecraft.world.item.*;
 
 public class ClientUtils {
     public static ItemStack getTabIconItem() {
@@ -21,7 +18,5 @@ public class ClientUtils {
         return new ItemStack(ItemInit.TELOS_SWORD.get());
     }
 
-    public static Player getClientPlayer() {
-        return Minecraft.getInstance().player;
-    }
+
 }
