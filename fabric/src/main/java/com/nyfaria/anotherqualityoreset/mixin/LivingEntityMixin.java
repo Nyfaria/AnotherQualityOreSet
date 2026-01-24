@@ -11,15 +11,17 @@ import org.spongepowered.asm.mixin.*;
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin {
 
-    @Shadow public abstract ItemStack getItemInHand(InteractionHand hand);
+    @Shadow
+    public abstract ItemStack getItemInHand(InteractionHand hand);
 
-    @WrapMethod(method="swing(Lnet/minecraft/world/InteractionHand;Z)V")
+    @WrapMethod(method = "swing(Lnet/minecraft/world/InteractionHand;Z)V")
     private void anotherqualityoreset$preventSwingOnClient(InteractionHand hand, boolean updateSelf, Operation<Void> original) {
         ItemStack stack = this.getItemInHand(hand);
-        if(stack.getItem() instanceof TelosSwordItem tsi) {
-            if (stack.isEmpty() || !tsi.onEntitySwing(stack, (LivingEntity) (Object) this)) {
-                original.call(hand, updateSelf);
+        if (!stack.isEmpty()) {
+            if (stack.getItem() instanceof TelosSwordItem tsi) {
+                tsi.onEntitySwing(stack, (LivingEntity) (Object) this);
             }
         }
+        original.call(hand, updateSelf);
     }
 }

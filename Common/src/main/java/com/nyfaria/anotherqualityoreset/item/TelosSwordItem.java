@@ -18,7 +18,7 @@ public class TelosSwordItem extends SwordItem {
     public boolean onEntitySwing(ItemStack stack, LivingEntity entity) {
         Level level = entity.level();
 
-        if (!level.isClientSide) {
+        if (!level.isClientSide && !entity.swinging) {
             shootProjectile(level, entity, 0.0f);
             shootProjectile(level, entity, 30.0f);
             shootProjectile(level, entity, -30.0f);

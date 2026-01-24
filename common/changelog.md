@@ -1,3 +1,7 @@
+## Version 2.0.3
+- Fixed Telos Sword breaking Fabric's Mining Animation.
+- Fixed Telos Sword spamming if mining blocks with it like a weirdo.
+
 ## Version 2.0.2
 - Fixed log spam
 - Fixed Creative Mode Tab Crash
